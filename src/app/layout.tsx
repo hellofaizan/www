@@ -53,7 +53,11 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={GeistSans.className + " min-h-dvh md:min-h-screen bg-background"}>
+      <body
+        className={
+          GeistSans.className + " min-h-dvh md:min-h-screen bg-background"
+        }
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -68,9 +72,9 @@ export default function RootLayout({
             className="absolute z-[-1] left-0 w-full h-1/2 md:h-[70%] lg:h-[80%] object-cover md:object-fill"
           />
           <div className="flex-auto min-w-0 flex flex-col md:px-0 container md:max-w-3xl mx-auto w-full px-0 md:pt-16">
-            <div className="flex-1 px-2 md:px-0">
+            <div className="flex-1">
               <Navbar />
-              {children}
+              <div className="px-3 md:px-0">{children}</div>
             </div>
           </div>
         </ThemeProvider>
