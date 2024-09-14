@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import "./styles/globals.css";
 import { ThemeProvider } from "~/hooks/theme-provider";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,13 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>
+      <body className={GeistSans.className + " min-h-dvh md:min-h-screen"}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Image src={"/bg.svg"} width={0} height={0} alt="background" className="absolute z-[-1] left-0 w-full h-1/2 md:h-[70%] lg:h-[80%] object-cover md:object-fill" />
           {children}
         </ThemeProvider>
       </body>
