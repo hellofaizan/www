@@ -37,7 +37,7 @@ export function Navbar() {
             </p>
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
-                <div className="flex flex-row items-center ">
+                <div className="flex flex-row items-center" key={name}>
                   <Link
                     key={path}
                     href={path}
