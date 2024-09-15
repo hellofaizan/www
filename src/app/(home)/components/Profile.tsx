@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Online from "./online";
+import Online from "../../../components/online";
 
 export default function Profile() {
   return (

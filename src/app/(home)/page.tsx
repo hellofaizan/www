@@ -1,8 +1,7 @@
 import Image from "next/image";
-import AboutMe from "~/components/aboutme";
-import Connect from "~/components/connect";
-import { ModeToggle } from "~/components/ModeToggle";
-import Profile from "~/components/Profile";
+import AboutMe from "~/app/(home)/components/aboutme";
+import Connect from "~/app/(home)/components/connect";
+import Profile from "~/app/(home)/components/Profile";
 
 export default function Home() {
   return (
