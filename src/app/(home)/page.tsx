@@ -4,6 +4,7 @@ import Connect from "~/app/(home)/components/connect";
 import Profile from "~/app/(home)/components/Profile";
 import SectionSeparator from "~/components/separator";
 import MainSkills from "./components/mainskills";
+import Pinnedprojects from "./components/pinnedprojects";
 
 export default function Home() {
   const basicInfo =
@@ -38,6 +39,7 @@ export default function Home() {
 
       <SectionSeparator title="WORK" link="/work" />
       <SectionSeparator title="PROJECTS" link="/projects" />
+      <Pinnedprojects />
     </div>
   );
 }
