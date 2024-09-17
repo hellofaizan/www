@@ -33,13 +33,12 @@ export default function Home() {
         <AboutMe text={aboutMe3} />
       </div>
 
-      <SectionSeparator title="SKILLS" link="/about#skills" />
-
       <MainSkills />
 
-      <SectionSeparator title="WORK" link="/work" />
+      <SectionSeparator title="CAREER" link="/work" />
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
+      <SectionSeparator title="NOTES" link="/projects" />
     </div>
   );
 }
