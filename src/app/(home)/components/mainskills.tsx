@@ -1,4 +1,6 @@
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function MainSkills() {
@@ -20,10 +22,6 @@ export default function MainSkills() {
       name: "Java",
     },
     {
-      logo: "/techlogos/javascript.svg",
-      name: "JavaScript",
-    },
-    {
       logo: "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
       name: "Python",
     },
@@ -37,7 +35,7 @@ export default function MainSkills() {
     },
     {
       logo: "/techlogos/postgresql.svg",
-      name: "PostgreSQL",
+      name: "Postgres",
     },
     {
       logo: "/techlogos/blender.svg",
@@ -67,6 +65,10 @@ export default function MainSkills() {
           </div>
         );
       })}
+      <Link href={"/about#skills"} className="flex items-center gap-2 border p-1 px-3 rounded-md">
+        <span className="text-sm font-medium">View All</span>
+        <ExternalLink size={15} />
+      </Link>
     </div>
   );
 }
