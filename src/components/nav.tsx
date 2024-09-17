@@ -23,7 +23,7 @@ export function Navbar() {
   const pathname = usePathname();
   return (
     <nav className="flex flex-row md:mb-20 mb-14 px-3 md:px-0 border-b border-[#838383]/25 md:border-none">
-      <div className="flex items-center justify-between text-lg w-full md:border md:border-[#838383]/45 lg:rounded-2xl md:rounded-lg md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-lg">
+      <div className="flex items-center justify-between text-lg w-full md:border md:border-[#838383]/45 md:rounded-xl md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-lg">
         <div className="flex flex-row items-center flex-1 gap-4 md:pl-2">
           <Image src="/faizan.png" width={40} height={40} alt="Hellofaizan" />
           <div className="hidden md:flex items-center">
