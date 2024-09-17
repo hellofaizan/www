@@ -13,12 +13,12 @@ export default function Connect() {
 
       <div className="flex items-center gap-1 justify-end">
         <Link href="https://twitter.com/hellofaizaan" target="_blank">
-          <Button className="rounded-full border border-muted px-6 bg-[#070707] text-white hover:bg-[#0f0f0f] flex items-center gap-1">
+          <Button variant={"default"} className="rounded-full border border-muted px-6 bg-[#070707] text-white hover:bg-[#0f0f0f] flex items-center gap-1">
             <Twitter size={16} />
             Connect
           </Button>
         </Link>
-        <Button className="rounded-full border border-muted px-6 bg-[#345FCD] text-white hover:bg-[#2760f0] flex items-center gap-1">
+        <Button variant={"default"} className="rounded-full border border-muted px-6 bg-[#345FCD] text-white hover:bg-[#2760f0] flex items-center gap-1">
           <User size={16} />
           Resume
         </Button>

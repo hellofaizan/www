@@ -72,11 +72,6 @@ export default function Skills() {
       name: "Flutter",
     },
     {
-      logo: "/techlogos/gitlab.svg",
-      name: "Gitlab",
-    },
-
-    {
       logo: "/techlogos/tailwindcss.svg",
       name: "Tailwind CSS",
     },
@@ -99,22 +94,6 @@ export default function Skills() {
     {
       logo: "/techlogos/git.svg",
       name: "Git",
-    },
-    {
-      logo: "/techlogos/lemonsqueezy.svg",
-      name: "LemonSqueezy",
-    },
-    {
-      logo: "/techlogos/reactquery.svg",
-      name: "React Query",
-    },
-    {
-      logo: "/techlogos/materialui.svg",
-      name: "Material UI",
-    },
-    {
-      logo: "/techlogos/redis.svg",
-      name: "Redis",
     },
     {
       logo: "/techlogos/postgresql.svg",
@@ -144,8 +123,28 @@ export default function Skills() {
       name: "Vim",
     },
     {
+      logo: "/techlogos/gitlab.svg",
+      name: "Gitlab",
+    },
+    {
       logo: "/techlogos/photoshop.svg",
       name: "Photoshop",
+    },
+    {
+      logo: "/techlogos/lemonsqueezy.svg",
+      name: "LemonSqueezy",
+    },
+    {
+      logo: "/techlogos/reactquery.svg",
+      name: "React Query",
+    },
+    {
+      logo: "/techlogos/materialui.svg",
+      name: "Material UI",
+    },
+    {
+      logo: "/techlogos/redis.svg",
+      name: "Redis",
     },
     {
       logo: "/techlogos/docusaurus.svg",
@@ -172,9 +171,9 @@ export default function Skills() {
       name: "Hugging Face",
     },
     {
-        logo: "/techlogos/premiere.svg",
-        name: "Premiere Pro",
-      },
+      logo: "/techlogos/premiere.svg",
+      name: "Premiere Pro",
+    },
     {
       logo: "/techlogos/intellijidea.svg",
       name: "IntelliJ Idea",

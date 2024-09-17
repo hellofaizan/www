@@ -3,7 +3,7 @@ import AboutMe from "~/app/(home)/components/aboutme";
 import Connect from "~/app/(home)/components/connect";
 import Profile from "~/app/(home)/components/Profile";
 import SectionSeparator from "~/components/separator";
-import Skills from "./components/skills";
+import MainSkills from "./components/mainskills";
 
 export default function Home() {
   const basicInfo =
@@ -31,9 +31,9 @@ export default function Home() {
         <AboutMe text={aboutMe3} />
       </div>
 
-      <SectionSeparator title="SKILLS" />
+      <SectionSeparator title="SKILLS" link="/about#skills" />
 
-      <Skills />
+      <MainSkills />
     </div>
   );
 }

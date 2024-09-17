@@ -7,11 +7,12 @@ import { cn } from "~/lib/utils";
 interface SeparatorProps {
   title: string;
   link?: string;
+  linkText?: string;
 }
 
 export default function SectionSeparator(props: SeparatorProps) {
   return (
-    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+    <div className="flex items-center gap-2 text-muted-foreground text-xs md:text-sm">
       <Separator
         className={cn(props.link ? "w-[55%] md:w-[75%]" : "w-[70%] md:w-[80%]")}
       />
@@ -22,7 +23,7 @@ export default function SectionSeparator(props: SeparatorProps) {
             href={props.link}
             className="border rounded-lg px-3 flex items-center gap-1"
           >
-            more
+            <span>{props.linkText || "more"}</span>
             <ExternalLink size={12} />
           </Link>
         )}
