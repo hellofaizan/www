@@ -16,7 +16,7 @@ export default function SectionSeparator(props: SeparatorProps) {
         className={cn(props.link ? "w-[55%] md:w-[75%]" : "w-[70%] md:w-[80%]")}
       />
       <div className="flex gap-1 items-center">
-        <p className="text-sm">{props.title}</p>
+        <p className="text-xs">{props.title}</p>
         {props.link && (
           <Link
             href={props.link}
