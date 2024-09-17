@@ -4,6 +4,7 @@ import "~/styles/globals.css";
 import { ThemeProvider } from "~/hooks/theme-provider";
 import Image from "next/image";
 import { Navbar } from "~/components/nav";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "FindSaaS AI - Discover a micro saas idea with AI",
@@ -78,6 +79,11 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        <Script
+          defer
+          src="https://stats.findsaas.pro/script.js"
+          data-website-id="51fed3b7-7942-4f98-86a5-f50f210633ff"
+        ></Script>
       </body>
     </html>
   );
