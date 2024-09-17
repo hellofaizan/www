@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
+import { cn } from "~/lib/utils";
 
 interface AboutMeProps {
   text: string;
@@ -72,6 +73,10 @@ export default function AboutMe(props: AboutMeProps) {
             {...props}
           />
         ),
+        ul: ({ node, ...props }: any) => (
+          <ul className={"ml-4 list-inside list-disc text-[rgb(192,192,192)] text-sm md:text-lg"} {...props} />
+        ),
+        li: ({ node, ...props }: any) => <li className={"mt-1"} {...props} />,
       }}
     >
       {props.text}

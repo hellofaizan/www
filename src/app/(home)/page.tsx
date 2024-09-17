@@ -19,6 +19,11 @@ export default function Home() {
   const aboutMe3 =
     "I'm very curious about AI, open source, internet startups, SaaS, developer tools and beautiful UX! Drop me a msg via my [discord server ![discord](/companylogo/discord.svg)](https://discord.gg/vUHMxPvege) if you'd like to hear my thoughts on what you're working on.";
 
+  const info = ` - Jammu and kashmir, India 🇮🇳
+  - 13 Sep, 2003
+  - I also enjoy Chess, Football and travelling
+  - Have an idea? Let's [discuss ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
+
   return (
     <div className="flex flex-col gap-6 md:gap-8">
       <Profile />
@@ -31,6 +36,7 @@ export default function Home() {
         <AboutMe text={aboutMe1} />
         <AboutMe text={aboutMe2} />
         <AboutMe text={aboutMe3} />
+        <AboutMe text={info} />
       </div>
 
       <MainSkills />
