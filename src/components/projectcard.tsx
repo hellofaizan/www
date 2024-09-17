@@ -31,7 +31,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           <div className="flex gap-2 items-center overflow-hidden flex-1">
             <p className="text-2xl font-semibold">{props.title}</p>
             {props.status && (
-              <span className="text-xs bg-[#ffffff0d] px-2 border rounded-md">
+              <span className="text-xs bg-[#ffffff0d] px-2 border border-[#5757576e] rounded-md">
                 {props.status}
               </span>
             )}

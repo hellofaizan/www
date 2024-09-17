@@ -71,7 +71,7 @@ export default function RootLayout({
             alt="background"
             className="absolute z-[-1] left-0 w-full h-1/2 md:h-[70%] lg:h-[80%] object-cover md:object-fill"
           />
-          <div className="flex-auto min-w-0 flex flex-col md:px-0 container md:max-w-3xl mx-auto w-full px-0 md:pt-16 pb-4">
+          <div className="flex-auto min-w-0 flex flex-col md:px-0 container md:max-w-3xl mx-auto w-full px-0 md:pt-16 pb-6 md:pb-8">
             <div className="flex-1">
               <Navbar />
               <div className="px-3 md:px-0">{children}</div>
