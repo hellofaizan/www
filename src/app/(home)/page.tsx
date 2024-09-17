@@ -35,7 +35,6 @@ export default function Home() {
 
       <MainSkills />
 
-      <SectionSeparator title="CAREER" link="/work" />
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
       <SectionSeparator title="NOTES" link="/projects" />
