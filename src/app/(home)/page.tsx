@@ -14,10 +14,10 @@ export default function Home() {
     "👋 Hello, I'm a front-end web and android developer and recently graduated from high school, This year my primary focus is gonna be improve my coding skills and sooner or later i will start DSA journey and get into competitive programming.";
 
   const aboutMe2 =
-    "However, I remain excited to expanding my network. Feel free to reach out via [email](mailto:faizancurious@gmail.com) or [Twitter/X](https://x.com/hellofaizan) if you would like to connect or simply have a friendly chat.";
+    "However, I remain excited to expanding my network. Feel free to reach out via [email ![Email](/companylogo/gmail.svg)](mailto:faizancurious@gmail.com) or [Twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/hellofaizaan) or schedule a meet on [Cal.com ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet) if you would like to connect or simply have a friendly chat.";
 
   const aboutMe3 =
-    "I'm very curious about AI, open source, internet startups, SaaS, developer tools and beautiful UX! Drop me a msg via [email](mailto:faizancurious@gmail.com) if you'd like to hear my thoughts on what you're working on.";
+    "I'm very curious about AI, open source, internet startups, SaaS, developer tools and beautiful UX! Drop me a msg via my [discord server ![discord](/companylogo/discord.svg)](https://discord.gg/vUHMxPvege) if you'd like to hear my thoughts on what you're working on.";
 
   return (
     <div className="flex flex-col gap-6 md:gap-8">
