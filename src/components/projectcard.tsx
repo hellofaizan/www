@@ -15,6 +15,7 @@ export default function ProjectCard(props: ProjectCardProps) {
   return (
     <Link
       href={props.link || "/"}
+      target="_blank"
       className="bg-[#ffffff0d] rounded-md overflow-hidden p-4 py-5"
     >
       <div className="flex items-center gap-2">

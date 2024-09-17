@@ -7,7 +7,7 @@ export default function Pinnedprojects() {
       title: "Project 1",
       description: "Project 1 Description",
       logo: "/techlogos/kotlin.svg",
-      link: "Project 1 Link",
+      link: "https://findsaas.pro",
       status: "WIP",
     },
     {
