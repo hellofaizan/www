@@ -11,15 +11,15 @@ export default function Profile() {
           width={150}
           height={150}
           alt="Hellofaizan"
-          className="w-20 h-20 md:w-36 md:h-36"
+          className="w-[70px] h-[70px] md:w-32 md:h-32"
         />
         <Online />
       </div>
       <div className="flex flex-col items-start">
-        <h1 className="text-3xl md:text-5xl font-istok font-bold">
+        <h1 className="text-2xl md:text-5xl font-istok font-bold">
           Hello, I&apos;m Faizan
         </h1>
-        <p className="text-lg font-light text-[#C0C0C0]">Full stack web, android dev</p>
+        <p className="md:text-lg font-light text-[#C0C0C0]">Full stack web, android dev</p>
       </div>
     </div>
   );
