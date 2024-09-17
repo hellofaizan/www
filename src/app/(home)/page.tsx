@@ -25,6 +25,7 @@ export default function Home() {
       <Connect />
 
       <SectionSeparator title="ABOUT" />
+
       <div className="flex flex-col gap-3">
         <AboutMe text={aboutMe1} />
         <AboutMe text={aboutMe2} />
@@ -34,6 +35,9 @@ export default function Home() {
       <SectionSeparator title="SKILLS" link="/about#skills" />
 
       <MainSkills />
+
+      <SectionSeparator title="WORK" link="/work" />
+      <SectionSeparator title="PROJECTS" link="/projects" />
     </div>
   );
 }
