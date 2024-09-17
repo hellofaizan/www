@@ -12,10 +12,8 @@ interface SeparatorProps {
 
 export default function SectionSeparator(props: SeparatorProps) {
   return (
-    <div className="flex items-center gap-2 text-muted-foreground text-xs md:text-sm">
-      <Separator
-        className={cn(props.link ? "w-[55%] md:w-[75%]" : "w-[70%] md:w-[80%]")}
-      />
+    <div className="flex col-span-3 items-center gap-2 text-muted-foreground text-xs md:text-sm">
+      <Separator className="flex-1"/>
       <div className="flex gap-1 items-center">
         <p className="text-xs">{props.title}</p>
         {props.link && (
@@ -28,8 +26,8 @@ export default function SectionSeparator(props: SeparatorProps) {
           </Link>
         )}
       </div>
-      <div className="flex-1 flex items-center justify-center">
-        <Separator className="flex-1" />
+      <div className="w-[8%] flex items-center justify-center">
+        <Separator/>
         <span className="w-1 h-1 bg-muted rotate-45 -ml-1" />
       </div>
     </div>

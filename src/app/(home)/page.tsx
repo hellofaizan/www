@@ -25,7 +25,7 @@ export default function Home() {
       <AboutMe text={basicInfo} />
       <Connect />
 
-      <SectionSeparator title="ABOUT" />
+      <SectionSeparator title="ABOUT ME" />
 
       <div className="flex flex-col gap-3">
         <AboutMe text={aboutMe1} />
