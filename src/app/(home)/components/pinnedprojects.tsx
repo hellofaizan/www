@@ -4,18 +4,18 @@ import ProjectCard from "~/components/projectcard";
 export default function Pinnedprojects() {
   const Pinnedprojects = [
     {
-      title: "Project 1",
-      description: "Project 1 Description",
-      logo: "/techlogos/kotlin.svg",
-      link: "https://findsaas.pro",
+      title: "Tielinks",
+      description: "A super cool link in bio website to showcase your links in a beautiful way.",
+      logo: "/projectlogos/tielinks.svg",
+      link: "https://tielinks.vercel.app",
       status: "WIP",
     },
     {
-      title: "Project 2",
-      description: "Project 2 Descriptionawd aw dwad awawdawd awdygawgdaywd awd awyd",
-      logo: "/techlogos/raspberrypi.svg",
-      link: "Project 2 Link",
-      status: "SOLD",
+      title: "FindSaaS",
+      description: "AI powered tool for innovative micro SaaS and startup ideas. Get tailored ideas based on your preferences and interests.",
+      logo: "/projectlogos/findsaas.svg",
+      link: "https://findsaas.pro",
+      status: "LIVE",
     },
   ];
   return (

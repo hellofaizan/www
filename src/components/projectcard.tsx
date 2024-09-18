@@ -25,8 +25,8 @@ export default function ProjectCard(props: ProjectCardProps) {
             src={props.logo}
             alt={props.title}
             className="w-12 h-12"
-            height={45}
-            width={45}
+            height={48}
+            width={48}
           />
         </div>
         <div className="flex-1 flex flex-col items-start gap-1">
