@@ -42,7 +42,6 @@ export default function Home() {
 
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
-      <SectionSeparator title="NOTES" link="/projects" />
     </div>
   );
 }
