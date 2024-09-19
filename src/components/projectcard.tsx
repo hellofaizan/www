@@ -16,7 +16,7 @@ export default function ProjectCard(props: ProjectCardProps) {
     <Link
       href={props.link || "/"}
       target="_blank"
-      className="bg-[#ffffff0d] rounded-md overflow-hidden p-4 py-5"
+      className="bg-[#ffffff0d] rounded-md overflow-hidden p-4 py-4"
       data-umami-event={`🐦‍🔥 Project ${props.title} click`}
     >
       <div className="flex items-center gap-2">
