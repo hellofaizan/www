@@ -4,6 +4,7 @@ import Profile from "~/app/(home)/components/Profile";
 import SectionSeparator from "~/components/separator";
 import MainSkills from "./components/mainskills";
 import Pinnedprojects from "./components/pinnedprojects";
+import Socials from "./components/socials";
 
 export default function Home() {
   const basicInfo =
@@ -42,6 +43,8 @@ export default function Home() {
 
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
+      <SectionSeparator title="FIND ME AROUND GLOBE" />
+      <Socials />
     </div>
   );
 }
