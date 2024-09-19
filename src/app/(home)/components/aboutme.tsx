@@ -1,7 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import { cn } from "~/lib/utils";
 
 interface AboutMeProps {
   text: string;
@@ -23,7 +22,6 @@ export default function AboutMe(props: AboutMeProps) {
   return (
     <ReactMarkdown
       components={{
-        // This will make sure links open in a new tab
         a: ({ node, children, ...props }) => {
           const childrenArray = React.Children.toArray(children);
 
@@ -74,7 +72,12 @@ export default function AboutMe(props: AboutMeProps) {
           />
         ),
         ul: ({ node, ...props }: any) => (
-          <ul className={"ml-4 list-inside list-disc text-[rgb(192,192,192)] text-sm md:text-lg"} {...props} />
+          <ul
+            className={
+              "ml-2 md:ml-3 list-inside list-disc text-[rgb(192,192,192)] text-sm md:text-lg"
+            }
+            {...props}
+          />
         ),
         li: ({ node, ...props }: any) => <li className={"mt-1"} {...props} />,
       }}
