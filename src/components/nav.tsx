@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="flex items-center justify-between text-lg w-full md:border md:border-[#838383]/45 md:rounded-xl md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-lg">
         <div className="flex flex-row items-center flex-1 gap-4 md:pl-2">
           <Image src="/faizan.png" width={40} height={40} alt="Hellofaizan" />
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-1">
             <Link
               href={"/"}
               className={cn(
@@ -56,7 +56,7 @@ export function Navbar() {
           </div>
         </div>
 
-        <div>
+        <div className="md:hidden">
           <Button
             variant={"ghost"}
             size={"icon"}
