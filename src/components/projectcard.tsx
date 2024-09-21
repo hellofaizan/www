@@ -16,11 +16,11 @@ export default function ProjectCard(props: ProjectCardProps) {
     <Link
       href={props.link || "/"}
       target="_blank"
-      className="bg-[#ffffff0d] rounded-md overflow-hidden p-4 py-4"
+      className="dark:bg-[#ffffff0d] bg-card-foreground/15 rounded-md overflow-hidden p-4 py-4"
       data-umami-event={`🐦‍🔥 Project ${props.title} click`}
     >
       <div className="flex items-center gap-2">
-        <div className="bg-[#a0a0a014] w-[70px] h-[70px] rounded-lg flex items-center justify-center">
+        <div className="dark:bg-[#a0a0a014] bg-muted-foreground/30 w-[70px] h-[70px] rounded-lg flex items-center justify-center">
           <Image
             src={props.logo}
             alt={props.title}
@@ -40,7 +40,7 @@ export default function ProjectCard(props: ProjectCardProps) {
           </div>
           <div className="flex-1">
             {props.description && (
-              <p className="text-xs text-[#ffffffa0]">{props.description}</p>
+              <p className="text-xs dark:text-[#ffffffa0]">{props.description}</p>
             )}
           </div>
         </div>

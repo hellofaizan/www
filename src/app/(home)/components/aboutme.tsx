@@ -67,14 +67,14 @@ export default function AboutMe(props: AboutMeProps) {
         },
         p: ({ node, ...props }) => (
           <p
-            className="text-[rgb(192,192,192)] text-sm md:text-base"
+            className="dark:text-[rgb(192,192,192)] text-sm md:text-base"
             {...props}
           />
         ),
         ul: ({ node, ...props }: any) => (
           <ul
             className={
-              "ml-2 md:ml-3 list-inside list-disc text-[rgb(192,192,192)] text-sm md:text-lg"
+              "ml-2 md:ml-3 list-inside list-disc dark:text-[rgb(192,192,192)] text-sm md:text-lg"
             }
             {...props}
           />

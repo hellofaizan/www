@@ -68,7 +68,7 @@ export default function Socials() {
     <div className="flex col-span-3 flex-col gap-2">
       {socials.map((social) => (
         <Link
-          className="flex items-baseline gap-2 text-muted-foreground hover:text-[rgb(192,192,192)]"
+          className="flex items-baseline gap-2 text-muted-foreground hover:dark:text-[rgb(192,192,192)] hover:text-muted-foreground text-[#2f2f2f] dark:text-muted-foreground"
           href={social.link}
           key={social.name}
         >
