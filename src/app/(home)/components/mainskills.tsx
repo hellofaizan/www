@@ -34,8 +34,8 @@ export default function MainSkills() {
       name: "Android",
     },
     {
-      logo: "/techlogos/raspberrypi.svg",
-      name: "Rasberry Pi",
+      logo: "/techlogos/arduino.png",
+      name: "Arduino",
     },
     {
       logo: "/techlogos/postgresql.svg",
