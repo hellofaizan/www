@@ -2,7 +2,6 @@ import { ExternalLink, MoveUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Separator } from "~/components/ui/separator";
-import { cn } from "~/lib/utils";
 
 interface SeparatorProps {
   title: string;
@@ -13,9 +12,9 @@ interface SeparatorProps {
 export default function SectionSeparator(props: SeparatorProps) {
   return (
     <div className="flex col-span-3 items-center gap-2 text-muted-foreground text-xs md:text-sm">
-      <Separator className="flex-1"/>
+      <Separator className="flex-1" />
       <div className="flex gap-1 items-center">
-        <p className="text-xs">{props.title}</p>
+        <p className="text-xs uppercase">{props.title}</p>
         {props.link && (
           <Link
             href={props.link}
@@ -27,7 +26,7 @@ export default function SectionSeparator(props: SeparatorProps) {
         )}
       </div>
       <div className="w-[8%] flex items-center justify-center">
-        <Separator/>
+        <Separator />
         <span className="w-1 h-1 bg-muted rotate-45 -ml-1" />
       </div>
     </div>

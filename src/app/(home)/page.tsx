@@ -5,6 +5,7 @@ import SectionSeparator from "~/components/separator";
 import MainSkills from "./components/mainskills";
 import Pinnedprojects from "./components/pinnedprojects";
 import Socials from "./components/socials";
+import Experiance from "~/components/experiance";
 
 export default function Home() {
   const basicInfo =
@@ -20,8 +21,8 @@ export default function Home() {
     "I'm very curious about AI, open source, internet startups, SaaS, developer tools and beautiful UX! Drop me a msg via my [discord server ![discord](/companylogo/discord.svg)](https://discord.gg/vUHMxPvege) if you'd like to hear my thoughts on what you're working on.";
 
   const info = ` - Jammu and kashmir, India 🇮🇳
-  - Birthday: 13 Sep, 2007 • 17teeeeeeen
-  - I also enjoy Chess, Football and travelling
+  - Birthday: 13 Sep, 07 • 7teeeeeeen (17)
+  - I also enjoy Chess, Football, IoT and travelling
   - Have an idea? Let's [discuss ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
 
   return (
@@ -43,6 +44,7 @@ export default function Home() {
 
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
+
       <SectionSeparator title="FIND ME AROUND GLOBE" />
       <Socials />
     </div>
