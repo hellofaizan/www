@@ -7,6 +7,7 @@ import { Navbar } from "~/components/nav";
 import Script from "next/script";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hellofaizan.tech'),
   title: "HelloFaizan | Indie Hacker",
   description:
     "Just a 17 yo who is trying to make something out of his life | Building internet products",
