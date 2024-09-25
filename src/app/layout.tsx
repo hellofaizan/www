@@ -7,21 +7,49 @@ import { Navbar } from "~/components/nav";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "FindSaaS AI - Discover a micro saas idea with AI",
+  title: "HelloFaizan | Indie Hacker",
   description:
-    "AI powered tool for innovative micro SaaS and startup ideas. Get tailored ideas based on your preferences and interests.",
+    "Just a 17 yo who is trying to make something out of his life | Building internet products",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   openGraph: {
-    title: "FindSaaS AI - Discover a micro saas idea with AI",
+    title: "HelloFaizan | Indie Hacker",
     description:
-      "AI powered tool for innovative micro SaaS and startup ideas. Get tailored ideas based on your preferences and interests.",
+      "Just a 17 yo who is trying to make something out of his life | Building internet products",
     type: "website",
     locale: "en_US",
-    url: "https://findsaas.xyz",
+    url: "https://hellofaizan.tech",
+    images: "/portfolio.png",
+    siteName: "HelloFaizan | Indie Hacker",
   },
   twitter: {
-    site: "@findsaas",
+    site: "@hellofaizaan",
+    images: "/portfolio.png",
+    card: "summary_large_image",
+    title: "HelloFaizan | Indie Hacker",
+    description:
+      "Just a 17 yo who is trying to make something out of his life | Building internet products",
+    creator: "@hellofaizaan",
   },
+  keywords: [
+    "HelloFaizan",
+    "Indie Hacker",
+    "Indie Hacker India",
+    "Indie Hacker Pakistan",
+    "Indie Hacker Bangladesh",
+    "Indie Hacker World",
+    "Indie Hacker",
+    "Indie Hacker",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  category: "technology",
+  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({

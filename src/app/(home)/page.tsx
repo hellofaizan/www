@@ -5,7 +5,6 @@ import SectionSeparator from "~/components/separator";
 import MainSkills from "./components/mainskills";
 import Pinnedprojects from "./components/pinnedprojects";
 import Socials from "./components/socials";
-import Experiance from "~/components/experiance";
 
 export default function Home() {
   const basicInfo =
