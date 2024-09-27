@@ -58,7 +58,7 @@ export function Navbar() {
         </div>
 
         <div className="flex gap-1 items-center">
-          <ModeToggle className="border-none hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0]" />
+          {/* <ModeToggle className="border-none hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0]" /> */}
           <Button
             variant={"ghost"}
             size={"icon"}
