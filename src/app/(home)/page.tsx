@@ -44,6 +44,9 @@ export default function Home() {
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
 
+      <SectionSeparator title="NOTES" link="/notes" />
+      <AboutMe text="Nothing here yet" />
+
       <SectionSeparator title="FIND ME AROUND GLOBE" />
       <Socials />
     </div>
