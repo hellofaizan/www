@@ -81,7 +81,7 @@
 }
 
 .copy-button:hover {
-  background-color: #2d3748;
+  background-color: rgb(71, 71, 71);
 }
 
 [data-rehype-pretty-code-figure] pre {
@@ -99,7 +99,7 @@
 [data-rehype-pretty-code-figure] code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
-  @apply mr-4 inline-block w-4 text-right text-gray-500;
+  @apply mr-3 inline-block w-3 text-right text-gray-500;
 }
 
 [data-rehype-pretty-code-figure] [data-line] {
@@ -108,7 +108,7 @@
 
 [data-rehype-pretty-code-figure] [data-highlighted-line] {
   background: rgba(200, 200, 255, 0.1);
-  @apply border-l-blue-400;
+  @apply border-l-orange-400;
 }
 
 [data-rehype-pretty-code-figure] [data-highlighted-chars] {
@@ -122,8 +122,4 @@
 
 .subheading-anchor {
   @apply no-underline hover:underline;
-}
-
-code {
-  font-family: 'MonaLisa', monospace !important;
 }
