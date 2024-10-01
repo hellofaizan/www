@@ -5,6 +5,7 @@ import SectionSeparator from "~/components/separator";
 import MainSkills from "./components/mainskills";
 import Pinnedprojects from "./components/pinnedprojects";
 import Socials from "./components/socials";
+import FeatNotes from "./components/FeatNotes";
 
 export default function Home() {
   const basicInfo =
@@ -45,7 +46,7 @@ export default function Home() {
       <Pinnedprojects />
 
       <SectionSeparator title="NOTES" link="/notes" />
-      <AboutMe text="Nothing here yet" />
+      <FeatNotes />
 
       <SectionSeparator title="FIND ME AROUND GLOBE" />
       <Socials />
