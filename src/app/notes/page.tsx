@@ -6,8 +6,7 @@ import { sortPostsByDate } from "~/lib/posts";
 import PostList from "./components/postlist";
 
 export default function page() {
-  const posts = notes;
-  const displayPosts = sortPostsByDate(posts.filter((post) => post.published));
+  const displayPosts = sortPostsByDate(notes.filter((post) => post.published));
   return (
     <div>
       <h1 className="text-3xl font-bold">Notes</h1>

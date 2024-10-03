@@ -2,6 +2,7 @@ import { defineConfig, defineCollection, s } from "velite";
 import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutoLinkHeadings from "rehype-autolink-headings";
+import { features } from "process";
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
@@ -18,6 +19,7 @@ const notes = defineCollection({
       description: s.string().max(999).optional(),
       date: s.isodate(),
       published: s.boolean().default(true),
+      featured: s.boolean().default(false),
       Author: s.string().max(99),
       AuthorUrl: s.string().optional(),
       body: s.mdx(),
