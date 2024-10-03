@@ -10,13 +10,21 @@ featured: false
 
 # SearchBar
 
-```tsx {2} showLineNumbers
-<PostList
- slug={post.slug}
- title={post.title}
- description={post.description || ""}
- date={post.date}
- author={post.Author}
- authorUrl={post.AuthorUrl || ""}
-/>
+```tsx {4, 5} showLineNumbers
+const copyToClipboard = async () => {
+    try {
+      // Get the pre element's text content
+      const preElement = document.querySelector("pre");
+      const codeElement = preElement?.querySelector("code");
+
+      // Get raw text content, removing any extra whitespace
+      const codeToCopy = codeElement?.textContent || "";
+
+      await navigator.clipboard.writeText(codeToCopy);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
 ```

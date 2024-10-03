@@ -94,7 +94,7 @@ export default async function Page({ params }: ParamsProps) {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 overflow-hidden">
+      <div className="flex flex-col gap-2 overflow-hidden mb-4">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         {post.description && (
           <p className="text-lg text-muted-foreground">{post.description}</p>
