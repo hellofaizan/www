@@ -38,45 +38,56 @@ const components = {
   h3: ({ className, ...props }: any) => (
     <h3
       className={cn(
-        "mt-8 scroll-m-20 text-2xl font-semibold tracking-tight",
+        "mt-8 scroll-m-20 text-3xl tracking-tight italic text-muted-foreground font-bold",
         className
       )}
       {...props}
     />
   ),
-  h4: ({ className, ...props }: any) => (
-    <h4
-      className={cn(
-        "mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h5: ({ className, ...props }: any) => (
-    <h5
-      className={cn(
-        "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h6: ({ className, ...props }: any) => (
-    <h6
-      className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  a: ({ className, ...props }: any) => (
-    <Link
-      className={cn("font-medium underline underline-offset-4", className)}
-      {...props}
-    />
-  ),
+  a: ({ className, ...props }: any) => {
+    const hasImage =
+      props.children &&
+      Array.isArray(props.children) &&
+      props.children.some((child: any) => child.type);
+
+    if (hasImage) {
+      return (
+        <Link
+          className={cn(
+            "inline-flex items-center gap-1 font-medium underline decoration-dashed hover:text-blue-500 underline-offset-4",
+            className
+          )}
+          {...props}
+        >
+          {props.children.map((child: any, index: number) => {
+            if (child.type) {
+              return (
+                <Image
+                  key={index}
+                  src={child.props.src}
+                  alt={child.props.alt}
+                  width={25}
+                  height={25}
+                  className="inline-block"
+                />
+              );
+            }
+            return child;
+          })}
+        </Link>
+      );
+    }
+
+    return (
+      <Link
+        className={cn(
+          "inline-flex items-center gap-1 font-medium underline decoration-dashed hover:text-blue-500 underline-offset-4",
+          className
+        )}
+        {...props}
+      />
+    );
+  },
   p: ({ className, ...props }: any) => (
     <p
       className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
