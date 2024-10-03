@@ -22,6 +22,14 @@ const navItems = {
 
 export function Navbar() {
   const pathname = usePathname();
+
+  const isActive = (path: string) => {
+    if (path === "/notes") {
+      return pathname === path || pathname.startsWith("/notes/");
+    }
+    return pathname === path;
+  };
+
   return (
     <nav className="flex flex-row md:mb-20 mb-14 px-3 md:px-0 border-b dark:border-[#838383]/25 border-[#606060]/45 md:border-none">
       <div className="flex items-center justify-between text-lg w-full md:border md:border-[#838383]/45 md:rounded-xl md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-lg">
@@ -45,7 +53,7 @@ export function Navbar() {
                     href={path}
                     className={cn(
                       "transition-all hover:dark:text-neutral-200 hover:text-neutral-900 hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0] rounded-md flex align-middle px-2",
-                      pathname === path && "bg-gray-500/10 dark:text-white"
+                      isActive(path) && "bg-gray-500/10 dark:text-white"
                     )}
                   >
                     {name}

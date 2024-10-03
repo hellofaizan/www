@@ -1,37 +1,43 @@
 import { Separator } from "@radix-ui/react-dropdown-menu";
-import { Calendar, Clock } from "lucide-react";
-import Link from "next/link";
+import { Button } from "~/components/ui/button";
+import { notes } from "#site/content";
 import React from "react";
-import { getPosts } from "~/lib/mdx";
+import { sortPostsByDate } from "~/lib/posts";
+import PostList from "./components/postlist";
 
 export default function page() {
-  const posts = getPosts();
+  const posts = notes;
+  const displayPosts = sortPostsByDate(posts.filter((post) => post.published));
   return (
     <div>
       <h1 className="text-3xl font-bold">Notes</h1>
       <Separator className="my-4" />
       <div>
-        {posts.map((post) => (
-          <Link href={`/notes/${post.slug}`} key={post.slug} className="flex items-center justify-between gap-2">
-            <h2 className="text-2xl font-bold">{post.title}</h2>
-            <div className="flex gap-4 items-center">
-              <p className="text-sm text-muted-foreground flex items-center gap-1">
-                <Clock size={14} /> {post.readTime}
-              </p>
-
-              <p className="text-sm text-muted-foreground flex items-center gap-1">
-                <Calendar size={14} />
-                <span>
-                  {new Date().toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
-                </span>
-              </p>
+        <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
+          {displayPosts.length > 0 ? (
+            displayPosts.map((post) => (
+              <div
+                key={post.slug}
+                className="flex w-full flex-col gap-2 rounded-lg border p-2 px-3"
+              >
+                <PostList
+                  slug={post.slug}
+                  title={post.title}
+                  description={post.description || ""}
+                  date={post.date}
+                  author={post.Author}
+                  authorUrl={post.AuthorUrl || ""}
+                />
+              </div>
+            ))
+          ) : (
+            <div className="flex w-full items-center justify-center">
+              <h1 className="text-3xl font-bold text-muted-foreground">
+                No Post Found
+              </h1>
             </div>
-          </Link>
-        ))}
+          )}
+        </div>
       </div>
     </div>
   );

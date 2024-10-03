@@ -46,7 +46,7 @@ export default function Home() {
       <Pinnedprojects />
 
       <SectionSeparator title="NOTES" link="/notes" />
-      <FeatNotes />
+      {/* <FeatNotes /> */}
 
       <SectionSeparator title="FIND ME AROUND GLOBE" />
       <Socials />

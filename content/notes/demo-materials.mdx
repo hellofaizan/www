@@ -1,12 +1,11 @@
 ---
-title: Demo Post 1
+title: Demo Material 2
 description: This is a demo post.
-date: 2024-07-20T00:00:00.000Z
+date: 09-05-2024
 Author: HelloFaizan
 AuthorUrl: 'https://tielinks.vercel.app/hellofaizam'
 published: true
 featured: false
-readTime: 3 min
 ---
 
 An h1 header
@@ -60,14 +59,14 @@ define foobar() {
 (which makes copying & pasting easier). You can optionally mark the
 delimited block for Pandoc to syntax highlight it:
 
-~~~python showLineNumbers {2-4}
+```python showLineNumbers {2-4}
 import time
 # Quick, count to ten!
 for i in range(10):
     # (but not *too* quick)
     time.sleep(0.5)
     print i
-~~~
+```
 
 
 
@@ -86,16 +85,79 @@ Now a nested list:
 Notice again how text always lines up on 4-space indents (including
 that last line which continues item 3 above).
 
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
+An h1 header
+============
 
-# Custom Components
-<Callout type="info">This is a callout </Callout>
+Paragraphs are separated by a blank line.
 
-# Youtube Embed
-<Youtube id="tSI98g3PDyE" />
+2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+look like:
 
-# Spotify Embed
+  * this one
+  * that one
+  * the other one
 
-<Spotify url="https://open.spotify.com/track/6bNB5gxFX6Q87DbQWb8OWZ?nd=1&dlsi=74da1b63f7784f06" />
+Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.
+
+> Block quotes are
+> written like so.
+>
+> They can span multiple paragraphs,
+> if you like.
+
+Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
+in chapters 12--14"). Three dots ... will be converted to an ellipsis.
+Unicode is supported. ☺
+
+
+
+An h2 header
+------------
+
+Here's a numbered list:
+
+ 1. first item
+ 2. second item
+ 3. third item
+
+Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here's a code sample:
+
+As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:
+
+~~~
+define foobar() {
+    print "Welcome to flavor country!";
+}
+~~~
+
+(which makes copying & pasting easier). You can optionally mark the
+delimited block for Pandoc to syntax highlight it:
+
+```python showLineNumbers {2-4}
+import time
+# Quick, count to ten!
+for i in range(10):
+    # (but not *too* quick)
+    time.sleep(0.5)
+    print i
+```
+
+
+
+### An h3 header ###
+
+Now a nested list:
+
+ 1. First, get these ingredients:
+
+      * carrots
+      * celery
+      * lentils
+
+ 2. Boil some water.
+
+Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above).

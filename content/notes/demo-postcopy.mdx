@@ -1,0 +1,22 @@
+---
+title: Demo Post 2
+description: This is a demo post.
+date: 09-05-2024
+Author: HelloFaizan
+AuthorUrl: 'https://tielinks.vercel.app/hellofaizam'
+published: true
+featured: false
+---
+
+# SearchBar
+
+```tsx {2} showLineNumbers
+<PostList
+ slug={post.slug}
+ title={post.title}
+ description={post.description || ""}
+ date={post.date}
+ author={post.Author}
+ authorUrl={post.AuthorUrl || ""}
+/>
+```

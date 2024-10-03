@@ -1,12 +1,29 @@
-import { getPostBySlug } from "~/lib/mdx";
-import markdownToHtml from "~/lib/mdxtohtml";
+import { Separator } from "~/components/ui/separator";
+import { MDXComponent } from "~/components/mdxcomponent";
+import "~/styles/mdx.css";
+import { notes } from "#site/content";
 import Link from "next/link";
 import { ArrowBigLeft, ArrowUpRight, Calendar, User2 } from "lucide-react";
-import { Separator } from "~/components/ui/separator";
-import { MDXContent } from "~/components/mdxcomponents";
 
-const PostLayout = async ({ params }: { params: { slug: string } }) => {
-  const post = getPostBySlug(params.slug);
+interface ParamsProps {
+  params: {
+    slug: string;
+  };
+}
+
+async function getNotesFromParams(params: ParamsProps["params"]) {
+  const slug = params.slug;
+  const post = notes.find((post) => post.slug === `notes/${slug}`);
+  return post;
+}
+
+export async function generateStaticParams(): Promise<ParamsProps["params"][]> {
+  return notes.map((post) => ({ slug: post.slug }));
+}
+
+export default async function Page({ params }: ParamsProps) {
+  const post = await getNotesFromParams(params);
+
   if (!post || !post.published) {
     return (
       <div className="flex flex-col gap-3">
@@ -35,8 +52,6 @@ const PostLayout = async ({ params }: { params: { slug: string } }) => {
       </div>
     );
   }
-  let content = "";
-  if (post) content = await markdownToHtml(post?.content);
 
   return (
     <article className="flex flex-col gap-6">
@@ -85,13 +100,8 @@ const PostLayout = async ({ params }: { params: { slug: string } }) => {
           <p className="text-lg text-muted-foreground">{post.description}</p>
         )}
         <Separator className="my-4" />
-        <div
-          className="prose prose-sm sm:prose lg:prose-l prose-gray dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <MDXComponent code={post.body} />
       </div>
     </article>
   );
-};
-
-export default PostLayout;
+}

@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import { Loader } from "lucide-react";
-import Link from "next/link";
 import axios from "axios";
 import SpotifyComponent from "./spotifycomponent";
 
@@ -22,7 +21,7 @@ export default async function Spotify({ url }: { url: string }) {
         </div>
       }
     >
-      <div className="md:w-[50%] w-full">
+      <div className="w-full">
         <SpotifyComponent data={data} url={url} />
       </div>
     </Suspense>
