@@ -50,7 +50,7 @@ export default defineConfig({
       [
         rehypeAutoLinkHeadings,
         {
-          behavior: "brfore",
+          behavior: "append",
           properties: {
             className: ["anchor-link"],
             ariaLabel: "Link to section",

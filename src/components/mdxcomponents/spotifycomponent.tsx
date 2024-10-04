@@ -23,7 +23,7 @@ export default function spotifycomponent({
         </div>
       }
     >
-      <div className="relative flex items-center overflow-hidden rounded-lg border p-2 hover:scale-[1.002]">
+      <div className="relative flex items-center overflow-hidden rounded-lg border p-2 h-28">
         <Link className="flex items-center overflow-hidden" href={url} target="_blank">
           <div className="items-cente justify-centerr relative flex flex-none">
             <Image

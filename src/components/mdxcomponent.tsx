@@ -96,7 +96,7 @@ const components = {
   p: ({ className, ...props }: any) => (
     <p
       className={cn(
-        "leading-7 [&:not(:first-child)]:mt-6 prose-p:text-base prose-p:text-slate-700 dark:prose-p:text-slate-300",
+        "leading-5 [&:not(:first-child)]:mt-6 prose-p:text-base prose-p:text-slate-700 dark:prose-p:text-slate-300",
         className
       )}
       {...props}
@@ -164,7 +164,7 @@ const components = {
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
       className={cn(
-        "m-0 border-t border-slate-200 p-0 even:bg-slate-100 dark:border-slate-700 dark:even:bg-slate-800/50",
+        "m-0 border-t p-0 border-muted even:bg-muted/45",
         className
       )}
       {...props}
@@ -173,7 +173,7 @@ const components = {
   th: ({ className, ...props }: any) => (
     <th
       className={cn(
-        "border border-slate-200 px-4 py-2 text-left font-semibold dark:border-slate-700",
+        "border border-muted px-4 py-2 text-left font-semibold",
         className
       )}
       {...props}
@@ -181,10 +181,7 @@ const components = {
   ),
   td: ({ className, ...props }: any) => (
     <td
-      className={cn(
-        "border border-slate-200 px-4 py-2 text-left dark:border-slate-700",
-        className
-      )}
+      className={cn("border border-muted px-4 py-2 text-left", className)}
       {...props}
     />
   ),
