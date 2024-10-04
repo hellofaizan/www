@@ -37,7 +37,9 @@ const Heading = ({ as: Component = "h1", children, ...props }: any) => {
 };
 
 const components = {
-  Image,
+  Image: (props: any) => (
+    <Image className="rounded-lg border shadow-sm" {...props} />
+  ),
   Callout,
   Youtube,
   Spotify,
@@ -142,10 +144,7 @@ const components = {
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className={cn(
-        "rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm",
-        className
-      )}
+      className={cn("rounded-lg border shadow-sm", className)}
       alt={alt}
       {...props}
     />
@@ -192,7 +191,7 @@ const components = {
       <CodeBlockWithCopy code={code} className={className}>
         <pre
           className={cn(
-            "my-4 overflow-x-auto rounded-lg border bg-muted/65",
+            "my-4 overflow-x-auto rounded-lg border",
             "scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-slate-100",
             className
           )}
@@ -206,7 +205,7 @@ const components = {
   code: ({ className, ...props }: any) => (
     <code
       className={cn(
-        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm bg-muted/45",
+        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm bg-[#24292d]",
         className
       )}
       {...props}

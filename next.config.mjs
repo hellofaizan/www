@@ -24,6 +24,11 @@ const config = {
         hostname: "i.scdn.co",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "images5.alphacoders.com",
+        port: "",
+      },
     ],
   },
   webpack: (config) => {
