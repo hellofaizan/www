@@ -5,6 +5,7 @@ import { Callout } from "./mdxcomponents/callout";
 import { Youtube } from "./mdxcomponents/youtube";
 import { cn } from "~/lib/utils";
 import CodeBlockWithCopy from "./mdxcomponents/coptCode";
+import SectionSeparator from "./separator";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -41,6 +42,7 @@ const components = {
   ),
   Callout,
   Youtube,
+  SectionSeparator,
   h1: (props: any) => <Heading as="h1" {...props} />,
   h2: (props: any) => <Heading as="h2" {...props} />,
   h3: (props: any) => <Heading as="h3" {...props} />,
@@ -147,9 +149,7 @@ const components = {
       {...props}
     />
   ),
-  hr: ({ ...props }) => (
-    <hr className="my-8 border-slate-200 dark:border-slate-800" {...props} />
-  ),
+  hr: ({ ...props }) => <hr className="my-8 border-muted" {...props} />,
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
       <table

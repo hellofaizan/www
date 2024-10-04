@@ -17,18 +17,17 @@ const config = {
       {
         protocol: "https",
         hostname: "icons.duckduckgo.com",
-        port: "",
       },
       {
         protocol: "https",
         hostname: "i.scdn.co",
-        port: "",
       },
       {
         protocol: "https",
         hostname: "images5.alphacoders.com",
-        port: "",
       },
+      { protocol: "https", hostname: "pbs.twimg.com" },
+      { protocol: "https", hostname: "abs.twimg.com" },
     ],
   },
   webpack: (config) => {
