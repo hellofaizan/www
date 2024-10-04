@@ -3,7 +3,6 @@ import Link from "next/link";
 import * as runtime from "react/jsx-runtime";
 import { Callout } from "./mdxcomponents/callout";
 import { Youtube } from "./mdxcomponents/youtube";
-import Spotify from "./mdxcomponents/Spotify";
 import { cn } from "~/lib/utils";
 import CodeBlockWithCopy from "./mdxcomponents/coptCode";
 
@@ -42,7 +41,6 @@ const components = {
   ),
   Callout,
   Youtube,
-  Spotify,
   h1: (props: any) => <Heading as="h1" {...props} />,
   h2: (props: any) => <Heading as="h2" {...props} />,
   h3: (props: any) => <Heading as="h3" {...props} />,
@@ -205,7 +203,7 @@ const components = {
   code: ({ className, ...props }: any) => (
     <code
       className={cn(
-        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm bg-[#24292d]",
+        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm dark:bg-[#24292d]",
         className
       )}
       {...props}
