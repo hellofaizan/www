@@ -12,38 +12,43 @@ const useMDXComponent = (code: string) => {
   return fn({ ...runtime }).default;
 };
 
+const Heading = ({ as: Component = "h1", children, ...props }: any) => {
+  const styles = {
+    h1: "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-8",
+    h2: "scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 mt-12 mb-4",
+    h3: "scroll-m-20 text-2xl font-semibold tracking-tight mt-8 mb-4",
+    h4: "scroll-m-20 text-xl font-semibold tracking-tight mt-6 mb-3",
+    h5: "scroll-m-20 text-lg font-semibold tracking-tight mt-6 mb-2",
+    h6: "scroll-m-20 text-base font-semibold tracking-tight mt-6 mb-2",
+  };
+  
+  return (
+    <Component 
+      className={cn(
+        "group relative flex items-center gap-2",
+        styles[Component as keyof typeof styles],
+        "prose prose-slate dark:prose-invert"
+      )} 
+      {...props}
+    >
+      {children}
+    </Component>
+  );
+};
+
 const components = {
   Image,
   Callout,
   Youtube,
   Spotify,
-  h1: ({ className, ...props }: any) => (
-    <h1
-      className={cn(
-        "mt-2 scroll-m-20 text-4xl font-bold tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h2: ({ className, ...props }: any) => (
-    <h2
-      className={cn(
-        "mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h3: ({ className, ...props }: any) => (
-    <h3
-      className={cn(
-        "mt-8 scroll-m-20 text-3xl tracking-tight italic text-muted-foreground font-bold",
-        className
-      )}
-      {...props}
-    />
-  ),
+  h1: (props: any) => <Heading as="h1" {...props} />,
+  h2: (props: any) => <Heading as="h2" {...props} />,
+  h3: (props: any) => <Heading as="h3" {...props} />,
+  h4: (props: any) => <Heading as="h4" {...props} />,
+  h5: (props: any) => <Heading as="h5" {...props} />,
+  h6: (props: any) => <Heading as="h6" {...props} />,
+  // ... rest of your components stay the same
+
   a: ({ className, ...props }: any) => {
     const hasImage =
       props.children &&
@@ -54,7 +59,7 @@ const components = {
       return (
         <Link
           className={cn(
-            "inline-flex items-center gap-1 font-medium underline decoration-dashed hover:text-blue-500 underline-offset-4",
+            "inline-flex items-center gap-1 font-medium text-primary hover:text-primary/80 underline underline-offset-4",
             className
           )}
           {...props}
@@ -68,7 +73,7 @@ const components = {
                   alt={child.props.alt}
                   width={25}
                   height={25}
-                  className="inline-block"
+                  className="inline-block rounded"
                 />
               );
             }
@@ -81,7 +86,7 @@ const components = {
     return (
       <Link
         className={cn(
-          "inline-flex items-center gap-1 font-medium underline decoration-dashed hover:text-blue-500 underline-offset-4",
+          "font-medium text-primary hover:text-primary/80 underline underline-offset-4",
           className
         )}
         {...props}
@@ -90,29 +95,38 @@ const components = {
   },
   p: ({ className, ...props }: any) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn(
+        "leading-7 [&:not(:first-child)]:mt-6 prose-p:text-base prose-p:text-slate-700 dark:prose-p:text-slate-300",
+        className
+      )}
       {...props}
     />
   ),
   ul: ({ className, ...props }: any) => (
     <ul
-      className={cn("my-2 ml-4 list-inside list-disc", className)}
+      className={cn(
+        "my-6 ml-6 list-disc prose-li:marker:text-slate-500 dark:prose-li:marker:text-slate-400",
+        className
+      )}
       {...props}
     />
   ),
   ol: ({ className, ...props }: any) => (
     <ol
-      className={cn("my-2 ml-4 list-inside list-decimal", className)}
+      className={cn(
+        "my-6 ml-6 list-decimal prose-li:marker:text-slate-500 dark:prose-li:marker:text-slate-400",
+        className
+      )}
       {...props}
     />
   ),
   li: ({ className, ...props }: any) => (
-    <li className={cn("mt-2", className)} {...props} />
+    <li className={cn("mt-2 text-slate-700 dark:text-slate-300", className)} {...props} />
   ),
   blockquote: ({ className, ...props }: any) => (
     <blockquote
       className={cn(
-        "mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground",
+        "mt-6 border-l-2 border-slate-300 pl-6 italic text-slate-800 dark:border-slate-700 dark:text-slate-200",
         className
       )}
       {...props}
@@ -124,24 +138,45 @@ const components = {
     ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
-    <img className={cn("rounded-md border", className)} alt={alt} {...props} />
+    <img 
+      className={cn(
+        "rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm",
+        className
+      )} 
+      alt={alt} 
+      {...props} 
+    />
   ),
-  hr: ({ ...props }) => <hr className="my-4 md:my-6" {...props} />,
+  hr: ({ ...props }) => (
+    <hr 
+      className="my-8 border-slate-200 dark:border-slate-800" 
+      {...props} 
+    />
+  ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
-      <table className={cn("w-full", className)} {...props} />
+      <table 
+        className={cn(
+          "w-full border-collapse text-sm",
+          className
+        )} 
+        {...props} 
+      />
     </div>
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
     <tr
-      className={cn("m-0 border-t p-0 even:bg-muted", className)}
+      className={cn(
+        "m-0 border-t border-slate-200 p-0 even:bg-slate-100 dark:border-slate-700 dark:even:bg-slate-800/50",
+        className
+      )}
       {...props}
     />
   ),
   th: ({ className, ...props }: any) => (
     <th
       className={cn(
-        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border border-slate-200 px-4 py-2 text-left font-semibold dark:border-slate-700",
         className
       )}
       {...props}
@@ -150,7 +185,7 @@ const components = {
   td: ({ className, ...props }: any) => (
     <td
       className={cn(
-        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border border-slate-200 px-4 py-2 text-left dark:border-slate-700",
         className
       )}
       {...props}
@@ -163,7 +198,8 @@ const components = {
       <CodeBlockWithCopy code={code} className={className}>
         <pre
           className={cn(
-            "my-2 overflow-x-auto rounded-lg border py-2 bg-muted/65",
+            "my-4 overflow-x-auto rounded-lg border bg-muted/65",
+            "scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-slate-100",
             className
           )}
           {...props}
@@ -176,18 +212,39 @@ const components = {
   code: ({ className, ...props }: any) => (
     <code
       className={cn(
-        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}
     />
   ),
   inlineCode: (props: any) => (
-    <code className="rounded bg-muted p-1 text-sm" {...props} />
+    <code 
+      className={cn(
+        "rounded bg-slate-100 px-1 py-0.5 text-sm font-mono text-slate-900",
+        "dark:bg-slate-800 dark:text-slate-100"
+      )} 
+      {...props} 
+    />
   ),
-  strong: (props: any) => <strong className="font-bold" {...props} />,
-  em: (props: any) => <em className="italic" {...props} />,
-  del: (props: any) => <del className="line-through" {...props} />,
+  strong: (props: any) => (
+    <strong 
+      className="font-semibold text-slate-900 dark:text-slate-100" 
+      {...props} 
+    />
+  ),
+  em: (props: any) => (
+    <em 
+      className="italic text-slate-800 dark:text-slate-200" 
+      {...props} 
+    />
+  ),
+  del: (props: any) => (
+    <del 
+      className="line-through text-slate-600 dark:text-slate-400" 
+      {...props} 
+    />
+  ),
 };
 
 interface MDXComponentProps {
@@ -196,5 +253,9 @@ interface MDXComponentProps {
 
 export function MDXComponent({ code }: MDXComponentProps) {
   const Component = useMDXComponent(code);
-  return <Component components={components} />;
+  return (
+    <article className="prose prose-slate max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-primary prose-pre:bg-slate-950">
+      <Component components={components} />
+    </article>
+  );
 }

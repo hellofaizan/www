@@ -51,6 +51,43 @@
   @apply border-b-2 p-1 shadow-none;
 }
 
-.subheading-anchor {
-  @apply no-underline hover:underline;
+/* styles/globals.css or your CSS file */
+
+/* Hide the anchor icon by default */
+.anchor-icon {
+  opacity: 0;
+  margin-right: 0.5rem;
+  font-weight: normal;
+  transition: opacity 0.2s ease;
+  color: #8b8b8b;
+}
+
+/* Show the anchor icon when hovering over the heading */
+h1:hover .anchor-icon,
+h2:hover .anchor-icon,
+h3:hover .anchor-icon,
+h4:hover .anchor-icon,
+h5:hover .anchor-icon,
+h6:hover .anchor-icon {
+  opacity: 1;
+}
+
+/* Style the anchor link */
+.anchor-link {
+  text-decoration: none;
+}
+
+.anchor-link:hover .anchor-icon {
+  color: #0070f3; /* or your preferred hover color */
+}
+
+/* Remove text-decoration from the heading itself */
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+}
+
+/* Optional: Add negative margin to compensate for the anchor width */
+h1, h2, h3, h4, h5, h6 {
+  margin-left: -1.5rem;
+  padding-left: 1.5rem;
 }

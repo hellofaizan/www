@@ -2,7 +2,7 @@ import { defineConfig, defineCollection, s } from "velite";
 import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutoLinkHeadings from "rehype-autolink-headings";
-import { features } from "process";
+import { h } from "hastscript";
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
@@ -50,11 +50,12 @@ export default defineConfig({
       [
         rehypeAutoLinkHeadings,
         {
-          behavior: "wrap",
+          behavior: "brfore",
           properties: {
-            className: ["subheading-anchor"],
+            className: ["anchor-link"],
             ariaLabel: "Link to section",
           },
+          content: h("span", { className: "anchor-icon" }, "#"),
         },
       ],
     ],

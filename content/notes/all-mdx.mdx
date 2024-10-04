@@ -1,0 +1,154 @@
+---
+title: All mdx tags
+description: This is a demo post.
+date: 09-05-2024
+Author: HelloFaizan
+AuthorUrl: 'https://tielinks.vercel.app/hellofaizam'
+published: true
+featured: false
+---
+
+
+# Main Heading (h1)
+This is a demonstration of all MDX components and markdown tags available in our blog.
+
+## Typography Examples (h2)
+
+### Basic Text Formatting (h3)
+
+#### Inline Styles (h4)
+
+##### Lists and Quotes (h5)
+
+###### Code Examples (h6)
+
+This is a regular paragraph with **bold text**, *italic text*, and ~~strikethrough text~~. You can also use `inline code` for technical terms.
+
+Here's a [link to somewhere](https://example.com) and a link with an image: [![Alt text](/path/to/image.jpg)](https://example.com).
+
+Let's test some lists:
+
+* Unordered list item 1
+* Unordered list item 2
+  * Nested item 2.1
+  * Nested item 2.2
+* Unordered list item 3
+
+1. Ordered list item 1
+2. Ordered list item 2
+   1. Nested ordered item 2.1
+   2. Nested ordered item 2.2
+3. Ordered list item 3
+
+> This is a blockquote. It can contain multiple lines and can be used to highlight important information or quotes from other sources.
+> 
+> You can have multiple paragraphs in a blockquote.
+
+---
+
+## Code Blocks
+
+Here's a code block with syntax highlighting:
+
+```tsx {4, 5} showLineNumbers title="HelloWorld" /async/
+const copyToClipboard = async () => {
+    try {
+      // Get the pre element's text content
+      const preElement = document.querySelector("pre");
+      const codeElement = preElement?.querySelector("code"); // ahwjdbvajhbwd jawhybd hjawdjh bawdb jawhydvb awybdjhawbdy awbjhd bawjyhgdb
+
+      // Get raw text content, removing any extra whitespace
+      const codeToCopy = codeElement?.textContent || "";
+
+      await navigator.clipboard.writeText(codeToCopy);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+```
+
+[Link Title](https://hellofaizan.com) [discuss ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)
+
+## Tables
+
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |
+| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |
+| Row 3, Col 1 | Row 3, Col 2 | Row 3, Col 3 |
+
+## Custom Components
+
+<Callout>
+  This is a custom callout component that can be used to highlight important information.
+  It supports **markdown** formatting within it.
+</Callout>
+
+<Youtube id="tSI98g3PDyE" />
+
+<Spotify url="https://open.spotify.com/track/6bNB5gxFX6Q87DbQWb8OWZ?nd=1&dlsi=74da1b63f7784f06" />
+
+## Images
+
+Here's a regular markdown image:
+
+![Alt text for image](/path/to/demo-image.jpg)
+
+And here's a Next.js Image component:
+
+<Image
+  src="/path/to/optimized-image.jpg"
+  alt="Alt text for optimized image"
+  width={800}
+  height={400}
+/>
+
+## Complex Example
+
+Here's a more complex example combining multiple elements:
+
+<Callout>
+  ### Important Note
+
+  This section demonstrates how to combine multiple markdown elements:
+
+  1. **Lists within callouts**
+  2. *Formatted text*
+  3. `Code snippets`
+
+  ```javascript
+  // Even code blocks within callouts
+  const demo = {
+    title: 'MDX Demo',
+    isAwesome: true
+  };
+  ```
+</Callout>
+
+---
+
+## Text Wrapping and Spacing
+
+This is a paragraph demonstrating text wrapping and spacing. It should have proper line height and margin spacing between other elements. The text should be easy to read and properly formatted.
+
+Here's the next paragraph to demonstrate spacing between paragraphs. It should have adequate margin to separate it from the previous paragraph while maintaining readability.
+
+## Final Notes
+
+This demo includes:
+* All heading levels (h1-h6)
+* Text formatting (bold, italic, strikethrough)
+* Lists (ordered and unordered)
+* Code blocks with syntax highlighting
+* Tables
+* Blockquotes
+* Custom components
+* Images (both markdown and Next.js Image)
+* Horizontal rules
+* Links
+* Inline code
+* Complex nested structures
+
+Remember that you can combine these elements in various ways to create rich, engaging content.
