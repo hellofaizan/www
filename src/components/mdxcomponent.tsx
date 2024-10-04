@@ -21,14 +21,14 @@ const Heading = ({ as: Component = "h1", children, ...props }: any) => {
     h5: "scroll-m-20 text-lg font-semibold tracking-tight mt-6 mb-2",
     h6: "scroll-m-20 text-base font-semibold tracking-tight mt-6 mb-2",
   };
-  
+
   return (
-    <Component 
+    <Component
       className={cn(
         "group relative flex items-center gap-2",
         styles[Component as keyof typeof styles],
         "prose prose-slate dark:prose-invert"
-      )} 
+      )}
       {...props}
     >
       {children}
@@ -121,7 +121,10 @@ const components = {
     />
   ),
   li: ({ className, ...props }: any) => (
-    <li className={cn("mt-2 text-slate-700 dark:text-slate-300", className)} {...props} />
+    <li
+      className={cn("mt-2 text-slate-700 dark:text-slate-300", className)}
+      {...props}
+    />
   ),
   blockquote: ({ className, ...props }: any) => (
     <blockquote
@@ -138,29 +141,23 @@ const components = {
     ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
-    <img 
+    <img
       className={cn(
         "rounded-lg border border-slate-200 dark:border-slate-800 shadow-sm",
         className
-      )} 
-      alt={alt} 
-      {...props} 
+      )}
+      alt={alt}
+      {...props}
     />
   ),
   hr: ({ ...props }) => (
-    <hr 
-      className="my-8 border-slate-200 dark:border-slate-800" 
-      {...props} 
-    />
+    <hr className="my-8 border-slate-200 dark:border-slate-800" {...props} />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
-      <table 
-        className={cn(
-          "w-full border-collapse text-sm",
-          className
-        )} 
-        {...props} 
+      <table
+        className={cn("w-full border-collapse text-sm", className)}
+        {...props}
       />
     </div>
   ),
@@ -212,37 +209,25 @@ const components = {
   code: ({ className, ...props }: any) => (
     <code
       className={cn(
-        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm bg-muted/45",
         className
       )}
       {...props}
     />
   ),
-  inlineCode: (props: any) => (
-    <code 
-      className={cn(
-        "rounded bg-slate-100 px-1 py-0.5 text-sm font-mono text-slate-900",
-        "dark:bg-slate-800 dark:text-slate-100"
-      )} 
-      {...props} 
-    />
-  ),
   strong: (props: any) => (
-    <strong 
-      className="font-semibold text-slate-900 dark:text-slate-100" 
-      {...props} 
+    <strong
+      className="font-semibold text-slate-900 dark:text-slate-100"
+      {...props}
     />
   ),
   em: (props: any) => (
-    <em 
-      className="italic text-slate-800 dark:text-slate-200" 
-      {...props} 
-    />
+    <em className="italic text-slate-800 dark:text-slate-200" {...props} />
   ),
   del: (props: any) => (
-    <del 
-      className="line-through text-slate-600 dark:text-slate-400" 
-      {...props} 
+    <del
+      className="line-through text-slate-600 dark:text-slate-400"
+      {...props}
     />
   ),
 };
