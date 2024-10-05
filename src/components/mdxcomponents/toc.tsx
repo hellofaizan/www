@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "~/hooks/use-media-query";
-import { ChevronsUpDown, Plus, X } from "lucide-react";
+import { ChevronsUpDown } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import {
   Collapsible,
@@ -21,6 +21,11 @@ export function TableOfContents({
   useEffect(() => {
     setToc(headings);
   }, [headings]);
+
+  const cleanText = (text: string) => {
+    // Remove '#' and '(h1)', '(h2)' from the text
+    return text.replace(/#|\s*\(h[1-6]\)/g, "").trim();
+  };
 
   if (isDesktop) {
     return (
@@ -58,7 +63,7 @@ export function TableOfContents({
                       heading.level === 2 ? "text-gray-400" : "text-blue-600"
                     }`}
                   >
-                    {heading.text}
+                    {cleanText(heading.text)} {/* Cleaned text */}
                   </a>
                 </li>
               ))}
@@ -104,7 +109,7 @@ export function TableOfContents({
                     heading.level === 2 ? "text-gray-400" : "text-blue-600"
                   }`}
                 >
-                  {heading.text}
+                  {cleanText(heading.text)} {/* Cleaned text */}
                 </a>
               </li>
             ))}

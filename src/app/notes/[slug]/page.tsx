@@ -3,7 +3,13 @@ import { MDXComponent } from "~/components/mdxcomponent";
 import "~/styles/mdx.css";
 import { notes } from "#site/content";
 import Link from "next/link";
-import { ArrowBigLeft, ArrowUpRight, Calendar, User2 } from "lucide-react";
+import {
+  ArrowBigLeft,
+  ArrowUpRight,
+  Calendar,
+  Edit,
+  User2,
+} from "lucide-react";
 
 interface ParamsProps {
   params: {
@@ -46,7 +52,7 @@ export default async function Page({ params }: ParamsProps) {
           </p>
         </div>
 
-        <h1 className="text-3xl font-bold text-muted-foreground">
+        <h1 className="text-3xl font-bold text-black/80 dark:text-white/80">
           No Post Found
         </h1>
       </div>
@@ -55,7 +61,7 @@ export default async function Page({ params }: ParamsProps) {
 
   return (
     <article className="flex flex-col gap-6">
-      <div className="flex items-center justify-between py-2 text-sm text-muted-foreground">
+      <div className="flex items-center justify-between py-2 text-xs text-black/80 dark:text-white/80">
         <Link href="/notes">
           <p className="flex items-center gap-1 rounded-md p-1 pr-3 hover:bg-muted/45">
             <ArrowBigLeft size={24} />
@@ -95,12 +101,20 @@ export default async function Page({ params }: ParamsProps) {
       </div>
 
       <div className="flex flex-col gap-2 overflow-hidden mb-8">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
-        {post.description && (
-          <p className="text-lg text-muted-foreground">{post.description}</p>
-        )}
+        <div className="flex flex-col md:items-center items-start md:flex-row justify-between">
+          <h1 className="text-2xl md:text-3xl font-bold">{post.title}</h1>
+          <Link
+            href={`https://github.com/hellofaizan/www/blob/master/content/notes/${params.slug}.mdx`}
+            target="_blank"
+            className="flex items-center gap-1 text-xs text-black/80 dark:text-white/80 hover:text-blue-500"
+          >
+            <Edit size={16} />
+            Edit Page
+          </Link>
+        </div>
         <Separator className="my-4" />
-        <MDXComponent code={post.body} title={post.title} /> {/* Pass the title */}
+        <MDXComponent code={post.body} title={post.title} />{" "}
+        {/* Pass the title */}
       </div>
     </article>
   );
