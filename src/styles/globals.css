@@ -68,6 +68,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .copy-button {
   position: absolute;
   top: 0.5rem;
