@@ -100,7 +100,7 @@ export default async function Page({ params }: ParamsProps) {
           <p className="text-lg text-muted-foreground">{post.description}</p>
         )}
         <Separator className="my-4" />
-        <MDXComponent code={post.body} />
+        <MDXComponent code={post.body} title={post.title} /> {/* Pass the title */}
       </div>
     </article>
   );

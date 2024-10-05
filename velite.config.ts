@@ -3,6 +3,8 @@ import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutoLinkHeadings from "rehype-autolink-headings";
 import { h } from "hastscript";
+import remarkGfm from "remark-gfm"; // Import remark-gfm
+import remarkToc from "remark-toc"; // Import remark-toc
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
@@ -59,6 +61,9 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [],
+    remarkPlugins: [
+      remarkGfm, // Add remark-gfm
+      remarkToc, // Add remark-toc
+    ],
   },
 });

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import * as runtime from "react/jsx-runtime";
@@ -6,6 +8,8 @@ import { Youtube } from "./mdxcomponents/youtube";
 import { cn } from "~/lib/utils";
 import CodeBlockWithCopy from "./mdxcomponents/coptCode";
 import SectionSeparator from "./separator";
+import { useEffect, useState } from "react";
+import { TableOfContents } from "./mdxcomponents/toc"; // Import the TableOfContents component
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -228,12 +232,36 @@ const components = {
 
 interface MDXComponentProps {
   code: string;
+  title: string; // Add title prop to filter out the file name
 }
 
-export function MDXComponent({ code }: MDXComponentProps) {
+export function MDXComponent({ code, title }: MDXComponentProps) {
   const Component = useMDXComponent(code);
+  const [headings, setHeadings] = useState<
+    Array<{ id: string; text: string; level: number }>
+  >([]);
+
+  useEffect(() => {
+    const headingElements = Array.from(document.querySelectorAll("h1, h2"));
+    const newHeadings = headingElements
+      .map((heading) => ({
+        id: heading.id,
+        text: heading.textContent || "",
+        level: parseInt(heading.tagName[1] || ""), // Get the heading level (1 for h1, 2 for h2)
+      }))
+      .filter(
+        (heading) =>
+          heading.text !== "Table of Contents" && 
+          heading.text !== "Blog Name" && 
+          heading.text !== title // Exclude the file name (title)
+      ); // Exclude unwanted headings
+
+    setHeadings(newHeadings);
+  }, [code, title]); // Add title to the dependency array
+
   return (
     <article className="prose prose-slate max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-primary prose-pre:bg-slate-950">
+      <TableOfContents headings={headings} /> {/* Render the TableOfContents */}
       <Component components={components} />
     </article>
   );
