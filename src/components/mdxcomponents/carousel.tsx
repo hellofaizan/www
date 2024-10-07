@@ -46,8 +46,6 @@ export default function Carousel({ children }: CarouselProps) {
     );
   };
 
-  console.log(currentIndex);
-
   return (
     <div
       className="group overflow-hidden rounded-xl"

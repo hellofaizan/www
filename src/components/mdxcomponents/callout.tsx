@@ -3,7 +3,7 @@ import { cn } from "~/lib/utils";
 interface CalloutProps {
   icon?: string;
   children?: React.ReactNode;
-  type?: "default" | "warning" | "danger" | "info";
+  type?: "default" | "warning" | "danger" | "info" | "alert";
 }
 
 export function Callout({
@@ -14,10 +14,11 @@ export function Callout({
 }: CalloutProps) {
   return (
     <div
-      className={cn("flex items-start rounded-md border p-3", {
-        "border-red-900": type === "danger",
-        "border-yellow-900": type === "warning",
-        "border-blue-900": type === "info",
+      className={cn("flex items-start rounded-md p-3", {
+        "border-l-red-600 bg-red-800/5 border-l-4": type === "danger",
+        "border-l-orange-600 bg-orange-800/5 border-l-4": type === "warning",
+        "border-l-blue-600 bg-blue-800/5 border-l-4": type === "info",
+        "border-l-yellow-600 bg-yellow-800/5 border-l-4": type === "alert",
       })}
       {...props}
     >
