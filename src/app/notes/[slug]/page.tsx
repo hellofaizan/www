@@ -72,7 +72,7 @@ export default async function Page({ params }: ParamsProps) {
           <p className="flex items-center gap-1">
             <Calendar size={20} />
             <span>
-              {new Date().toLocaleDateString("en-US", {
+              {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
