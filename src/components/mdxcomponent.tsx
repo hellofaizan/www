@@ -10,6 +10,7 @@ import CodeBlockWithCopy from "./mdxcomponents/coptCode";
 import SectionSeparator from "./separator";
 import { useEffect, useState } from "react";
 import { TableOfContents } from "./mdxcomponents/toc"; // Import the TableOfContents component
+import Carousel from "./mdxcomponents/carousel";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -47,6 +48,7 @@ const components = {
   Callout,
   Youtube,
   SectionSeparator,
+  Carousel,
   h1: (props: any) => <Heading as="h1" {...props} />,
   h2: (props: any) => <Heading as="h2" {...props} />,
   h3: (props: any) => <Heading as="h3" {...props} />,
@@ -251,8 +253,8 @@ export function MDXComponent({ code, title }: MDXComponentProps) {
       }))
       .filter(
         (heading) =>
-          heading.text !== "Table of Contents" && 
-          heading.text !== "Blog Name" && 
+          heading.text !== "Table of Contents" &&
+          heading.text !== "Blog Name" &&
           heading.text !== title // Exclude the file name (title)
       ); // Exclude unwanted headings
 
