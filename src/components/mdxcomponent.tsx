@@ -104,7 +104,7 @@ const components = {
   p: ({ className, ...props }: any) => (
     <p
       className={cn(
-        "leading-5 [&:not(:first-child)]:mt-6 prose-p:text-base prose-p:text-slate-700 dark:prose-p:text-slate-300",
+        "leading-5 my-2 [&:not(:first-child)]:mt-2 prose-p:text-base prose-p:text-slate-700 dark:prose-p:text-slate-300",
         className
       )}
       {...props}
@@ -113,7 +113,7 @@ const components = {
   ul: ({ className, ...props }: any) => (
     <ul
       className={cn(
-        "my-6 ml-6 list-disc prose-li:marker:text-slate-500 dark:prose-li:marker:text-slate-400",
+        "my-1 md:my-2 ml-6 list-disc prose-li:marker:text-slate-500 dark:prose-li:marker:text-slate-400",
         className
       )}
       {...props}
@@ -122,7 +122,7 @@ const components = {
   ol: ({ className, ...props }: any) => (
     <ol
       className={cn(
-        "my-6 ml-6 list-decimal prose-li:marker:text-slate-500 dark:prose-li:marker:text-slate-400",
+        "my-1 md:my-2 ml-6 list-decimal prose-li:marker:text-slate-500 dark:prose-li:marker:text-slate-400",
         className
       )}
       {...props}
@@ -150,14 +150,14 @@ const components = {
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
-      className={cn("rounded-lg border shadow-sm", className)}
+      className={cn("rounded-lg border shadow-sm my-1 md:my-4", className)}
       alt={alt}
       {...props}
     />
   ),
   hr: ({ ...props }) => <hr className="my-8 border-muted" {...props} />,
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-    <div className="my-6 w-full overflow-y-auto">
+    <div className="my-1 md:my-2 w-full overflow-y-auto">
       <table
         className={cn("w-full border-collapse text-sm", className)}
         {...props}
@@ -195,7 +195,7 @@ const components = {
       <CodeBlockWithCopy code={code} className={className}>
         <pre
           className={cn(
-            "my-4 overflow-x-auto rounded-lg border",
+            "my-2 overflow-x-auto rounded-lg border",
             "scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-slate-100",
             className
           )}

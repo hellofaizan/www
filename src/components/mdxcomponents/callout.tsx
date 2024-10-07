@@ -14,11 +14,12 @@ export function Callout({
 }: CalloutProps) {
   return (
     <div
-      className={cn("flex items-start rounded-md p-3", {
+      className={cn("flex items-start rounded-md p-3 my-2", {
         "border-l-red-600 bg-red-800/5 border-l-4": type === "danger",
         "border-l-orange-600 bg-orange-800/5 border-l-4": type === "warning",
         "border-l-blue-600 bg-blue-800/5 border-l-4": type === "info",
         "border-l-yellow-600 bg-yellow-800/5 border-l-4": type === "alert",
+        border: type === "default",
       })}
       {...props}
     >
