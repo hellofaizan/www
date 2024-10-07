@@ -13,7 +13,7 @@ export default function Carousel({ children }: CarouselProps) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % (images.length * 2)); // Repeat images
-    }, 5000); // Change image every 5 seconds
+    }, 4000); // Change image every 5 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [images.length]);
@@ -21,11 +21,38 @@ export default function Carousel({ children }: CarouselProps) {
   const handleImageClick = (index: number) => {
     setCurrentIndex(index % (images.length * 2)); // Adjust index for infinite loop
   };
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchStartX = e.touches[0]?.clientX ?? 0; // Safely handle undefined touches
+    const handleTouchMove = (e: TouchEvent) => {
+      const touchEndX = e.touches[0]?.clientX ?? 0; // Safely handle undefined touches
+      const deltaX = touchStartX - touchEndX;
+      if (Math.abs(deltaX) > 50) {
+        // Threshold for swipe
+        setCurrentIndex(
+          (prevIndex) =>
+            (prevIndex + (deltaX > 0 ? 1 : -1) + images.length * 2) %
+            (images.length * 2)
+        );
+        window.removeEventListener("touchmove", handleTouchMove);
+      }
+    };
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener(
+      "touchend",
+      () => {
+        window.removeEventListener("touchmove", handleTouchMove);
+      },
+      { once: true }
+    );
+  };
 
   console.log(currentIndex);
 
   return (
-    <div className="group overflow-hidden rounded-xl">
+    <div
+      className="group overflow-hidden rounded-xl"
+      onTouchStart={handleTouchStart}
+    >
       <motion.div
         ref={carouselRef}
         className="flex transition-transform duration-500"
