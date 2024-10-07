@@ -42,6 +42,7 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.0",
     "remark-toc": "^9.0.0",
+    "sonner": "^1.5.0",
     "spotify-url-info": "^3.2.17",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"

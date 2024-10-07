@@ -2,7 +2,6 @@
 
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
-import { cn } from "~/lib/utils";
 
 const CodeBlockWithCopy = ({ children }: any) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -12,12 +11,11 @@ const CodeBlockWithCopy = ({ children }: any) => {
       // Get the pre element's text content
       const preElement = document.querySelector("pre");
       const codeElement = preElement?.querySelector("code");
- 
-      // Get raw text content, removing any extra whitespace
       const codeToCopy = codeElement?.textContent || "";
- 
+
       await navigator.clipboard.writeText(codeToCopy);
       setIsCopied(true);
+
       setTimeout(() => setIsCopied(false), 2000);
     } catch (err) {
       console.error("Failed to copy text: ", err);
@@ -28,7 +26,7 @@ const CodeBlockWithCopy = ({ children }: any) => {
     <div className="relative">
       <button
         onClick={copyToClipboard}
-        className="absolute right-2 top-2 p-2 rounded-lg cursor-pointer z-20 dark:bg-muted bg-muted-foreground/15 hover:bg-muted/45"
+        className="absolute right-2 text-xs flex gap-1 items-center top-2 p-2 rounded-lg cursor-pointer z-20 dark:bg-muted bg-muted-foreground/15 hover:bg-muted/45"
         aria-label="Copy code"
       >
         {isCopied ? (
@@ -36,6 +34,7 @@ const CodeBlockWithCopy = ({ children }: any) => {
         ) : (
           <Copy className="h-4 w-4 dark:text-gray-400 text-black/45" />
         )}
+        {isCopied ? "Copied" : ""}
       </button>
 
       {children}

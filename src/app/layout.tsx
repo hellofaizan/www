@@ -5,6 +5,7 @@ import { ThemeProvider } from "~/hooks/theme-provider";
 import Image from "next/image";
 import { Navbar } from "~/components/nav";
 import Script from "next/script";
+import { Toaster } from "~/components/ui/sonner"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hellofaizan.tech'),
@@ -105,6 +106,7 @@ export default function RootLayout({
             <div className="flex-1">
               <Navbar />
               <div className="px-3 md:px-0">{children}</div>
+              <Toaster />
             </div>
           </div>
         </ThemeProvider>
