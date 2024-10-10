@@ -112,8 +112,8 @@ export default function RootLayout({
         </ThemeProvider>
         <Script
           defer
-          src="https://stats.findsaas.pro/script.js"
-          data-website-id="51fed3b7-7942-4f98-86a5-f50f210633ff"
+          src="https://stats.hellofaizan.tech/script.js"
+          data-website-id="92e2a7bc-f079-4387-be70-0ad0b202b7a8"
         ></Script>
       </body>
     </html>
