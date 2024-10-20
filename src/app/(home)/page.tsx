@@ -6,6 +6,8 @@ import MainSkills from "./components/mainskills";
 import Pinnedprojects from "./components/pinnedprojects";
 import Socials from "./components/socials";
 import FeatNotes from "./components/FeatNotes";
+import { sortPostsByDate } from "~/lib/posts";
+import { notes } from "#site/content";
 
 export default function Home() {
   const basicInfo =
@@ -24,6 +26,8 @@ export default function Home() {
   - Birthday: 13 Sep, 07 • 7teeeeeeen (17)
   - I also enjoy Chess, Football, IoT and travelling
   - Have an idea? Let's [discuss ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
+
+  const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
   return (
     <div className="flex flex-col gap-6 md:gap-8">
@@ -45,8 +49,12 @@ export default function Home() {
       <SectionSeparator title="PROJECTS" link="/projects" />
       <Pinnedprojects />
 
-      <SectionSeparator title="NOTES" link="/notes" />
-      {/* <FeatNotes /> */}
+      {featNotes.length > 0 && (
+        <>
+          <SectionSeparator title="NOTES" link="/notes" />
+          <FeatNotes />
+        </>
+      )}
 
       <SectionSeparator title="FIND ME AROUND GLOBE" />
       <Socials />
