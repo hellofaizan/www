@@ -22,7 +22,9 @@ export default function Home() {
   const aboutMe3 =
     "I'm very curious about AI, open source, internet startups, SaaS, developer tools and beautiful UX! Drop me a msg via my [discord server ![discord](/companylogo/discord.svg)](https://discord.gg/vUHMxPvege) if you'd like to hear my thoughts on what you're working on.";
 
-  const info = ` - Jammu and kashmir, India 🇮🇳
+  const info = ` 
+  - **Mohammad Faizan**
+  - Jammu and kashmir, India 🇮🇳
   - Birthday: 13 Sep, 07 • 7teeeeeeen (17)
   - I also enjoy Chess, Football, IoT and travelling
   - Have an idea? Let's [discuss ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
