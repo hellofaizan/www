@@ -5,42 +5,95 @@ import { ThemeProvider } from "~/hooks/theme-provider";
 import Image from "next/image";
 import { Navbar } from "~/components/nav";
 import Script from "next/script";
-import { Toaster } from "~/components/ui/sonner"
+import { Toaster } from "~/components/ui/sonner";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hellofaizan.tech'),
-  title: "HelloFaizan | Indie Hacker",
+  metadataBase: new URL("https://mohammadfaizan.in"),
+  title: "Mohammad Faizan | Full Stack Android and Web Developer | India",
   description:
-    "Just a 17 yo who is trying to make something out of his life | Building internet products",
+    "Mohammad Faizan, experienced Full Stack Android and Web Developer and specializing in React, Arduino, Java, and Kotlin. Creating responsive web applications and native Android apps | Building internet products",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
   openGraph: {
-    title: "HelloFaizan | Indie Hacker",
+    title: "Mohammad Faizan | Full Stack Android and Web Developer | India",
     description:
-      "Just a 17 yo who is trying to make something out of his life | Building internet products",
+      "Mohammad Faizan, experienced Full Stack Android and Web Developer and specializing in React, Arduino, Java, and Kotlin. Creating responsive web applications and native Android apps | Building internet products",
     type: "website",
     locale: "en_US",
-    url: "https://hellofaizan.tech",
+    url: "https://mohammadfaizan.in",
     images: "/portfolio.png",
-    siteName: "HelloFaizan | Indie Hacker",
+    siteName: "Mohammad Faizan | Full Stack Android and Web Developer | India",
   },
   twitter: {
     site: "@hellofaizaan",
     images: "/portfolio.png",
     card: "summary_large_image",
-    title: "HelloFaizan | Indie Hacker",
+    title: "Mohammad Faizan | Full Stack Android and Web Developer | India",
     description:
-      "Just a 17 yo who is trying to make something out of his life | Building internet products",
+      "Mohammad Faizan, experienced Full Stack Android and Web Developer and specializing in React, Arduino, Java, and Kotlin. Creating responsive web applications and native Android apps | Building internet products",
     creator: "@hellofaizaan",
   },
   keywords: [
-    "HelloFaizan",
-    "Indie Hacker",
-    "Indie Hacker India",
-    "Indie Hacker Pakistan",
-    "Indie Hacker Bangladesh",
-    "Indie Hacker World",
-    "Indie Hacker",
-    "Indie Hacker",
+    "Mohammad Faizan Developer Portfolio",
+    "Mohammad Faizan Front-End Developer Jammu Kashmir",
+    "Mohammad Faizan Android App Developer India",
+    "Mohammad Faizan Full Stack Developer",
+
+    // Role Based Keywords
+    "Mohammad Faizan Front-End Web Developer",
+    "Mohammad Faizan Android Developer",
+    "Mohammad Faizan Mobile App Developer",
+    "Mohammad Faizan UI/UX Developer",
+    "Mohammad Faizan JavaScript Developer",
+    "Mohammad Faizan React Developer",
+
+    // Technical Skills Keywords
+    "Mohammad Faizan HTML CSS JavaScript Developer",
+    "Mohammad Faizan Android Development Expert",
+    "Mohammad Faizan React.js Developer",
+    "Mohammad Faizan Next.js Projects",
+    "Mohammad Faizan Mobile-First Developer",
+    "Mohammad Faizan Responsive Web Designer",
+    "Mohammad Faizan Java Kotlin Developer",
+    "Mohammad Faizan Android SDK Expert",
+    "Mohammad Faizan Material Design Developer",
+    "Mohammad Faizan Tailwind CSS Expert",
+
+    // Interest Based Keywords
+    "Mohammad Faizan AI ML Developer",
+    "Mohammad Faizan Open Source Contributor",
+    "Mohammad Faizan SaaS Developer",
+    "Mohammad Faizan Developer Tools Expert",
+    "Mohammad Faizan UX Designer",
+    "Mohammad Faizan IoT Developer",
+    "Mohammad Faizan Tech Innovator",
+
+    // Location Based Keywords
+    "Mohammad Faizan Developer Jammu Kashmir",
+    "Mohammad Faizan Indian Developer",
+    "Mohammad Faizan Remote Developer India",
+    "Mohammad Faizan Freelance Developer India",
+    "Hire Mohammad Faizan Front-End Developer India",
+    "Mohammad Faizan Android App Developer Portfolio",
+    "Mohammad Faizan Custom Web Applications",
+    "Mohammad Faizan Mobile App Development Services",
+    "Mohammad Faizan React Native Development",
+    "Mohammad Faizan Modern Web Developer",
+    "Mohammad Faizan UI UX Development Projects",
+
+    // Action Based Keywords
+    "Hire Mohammad Faizan Android Developer",
+    "Hire Mohammad Faizan Front-End Developer",
+    "Mohammad Faizan Web Development Projects",
+    "Mohammad Faizan Mobile App Projects",
+    "Mohammad Faizan Developer Collaboration",
+    "Mohammad Faizan Tech Consultation",
+
+    // Emerging Tech Keywords
+    "Mohammad Faizan DSA Developer",
+    "Mohammad Faizan Competitive Programming",
+    "Mohammad Faizan AI Integration Expert",
+    "Mohammad Faizan Modern Web Technologies",
+    "Mohammad Faizan Tech Stack Expert",
   ],
   robots: {
     index: true,

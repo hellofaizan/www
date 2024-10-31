@@ -69,10 +69,6 @@ export default function MainSkills() {
           </div>
         );
       })}
-      <Link href={"/about#skills"} className="flex items-center gap-2 border p-1 px-3 rounded-md animate-pulse hover:animate-none">
-        <span className="text-sm font-medium">View More</span>
-        <ExternalLink size={15} />
-      </Link>
     </div>
   );
 }

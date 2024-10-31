@@ -12,7 +12,7 @@ export default function Pinnedprojects() {
     },
     {
       title: "FindSaaS",
-      description: "AI powered tool for innovative micro SaaS and startup ideas. Get tailored ideas based on your preferences and interests.",
+      description: "AI powered tool for innovative micro SaaS and startup ideas.",
       logo: "/projectlogos/findsaas.svg",
       link: "https://findsaas.pro",
       status: "LIVE",
