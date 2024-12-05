@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "~/styles/globals.css";
 import { ThemeProvider } from "~/hooks/theme-provider";
-import Image from "next/image";
 import { Navbar } from "~/components/nav";
 import Script from "next/script";
 import { Toaster } from "~/components/ui/sonner";
