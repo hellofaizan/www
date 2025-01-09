@@ -15,14 +15,12 @@ interface PostProps {
 }
 
 export default function PostList({
-  slug,
   title,
   description,
   date,
   author,
   authorUrl,
 }: PostProps) {
-  const router = useRouter();
   return (
     <div
       className="flex flex-col gap-2 cursor-pointer p-2"

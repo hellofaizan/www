@@ -20,7 +20,7 @@ const aboutMe2 =
   "Let's connect! Reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.in) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/hellofaizaan) to discuss tech, collaborate on projects, or just have an engaging conversation.";
 
 const info = `
-  - **Mohammad Faizan**
+  - Mohammad Faizan
   - Kashmir, India 🇮🇳
   - Self-taught Developer • Full-stack Enthusiast
   - Tech stack: Web Development, Android, IoT
