@@ -9,9 +9,6 @@ import { cn } from "~/lib/utils";
 import { ModeToggle } from "./ModeToggle";
 
 const navItems = {
-  "/about": {
-    name: "about",
-  },
   "/projects": {
     name: "projects",
   },
