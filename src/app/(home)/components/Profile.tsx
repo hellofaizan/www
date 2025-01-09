@@ -7,11 +7,11 @@ export default function Profile() {
     <div className="flex items-center gap-3 md:gap-4">
       <div className="relative">
         <Image
-          src="/helloofaizan.png"
+          src="/hellofaizan.png"
           width={150}
           height={150}
           alt="Hellofaizan"
-          className="w-[70px] h-[70px] md:w-32 md:h-32"
+          className="w-[70px] h-[70px] md:w-32 md:h-32 rounded-full"
         />
         <Online />
       </div>

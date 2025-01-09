@@ -11,10 +11,10 @@ export default function Pinnedprojects() {
       status: "WIP",
     },
     {
-      title: "FindSaaS",
-      description: "AI powered tool for innovative micro SaaS and startup ideas.",
-      logo: "/projectlogos/findsaas.svg",
-      link: "https://findsaas.pro",
+      title: "Pouzz App",
+      description: "Get anonymous confession, questions and testimonials from the online world",
+      logo: "/projectlogos/pouzz.svg",
+      link: "https://pouzz.xyz",
       status: "LIVE",
     },
   ];

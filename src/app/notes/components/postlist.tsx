@@ -24,7 +24,9 @@ export default function PostList({
 }: PostProps) {
   const router = useRouter();
   return (
-    <div className="flex flex-col gap-2">
+    <div
+      className="flex flex-col gap-2 cursor-pointer p-2"
+    >
       <p className="text-xl font-bold">{title}</p>
 
       <p className="text-sm text-muted-foreground">{description}</p>
@@ -43,7 +45,11 @@ export default function PostList({
           </p>
 
           {authorUrl ? (
-            <Link href={authorUrl} className="hover:text-blue-500" target="_blank">
+            <Link
+              href={authorUrl}
+              className="hover:text-blue-500"
+              target="_blank"
+            >
               <p className="group flex items-center gap-1">
                 <User2 size={16} />
                 <span>{author}</span>
@@ -57,15 +63,6 @@ export default function PostList({
             </p>
           )}
         </div>
-        <Button
-          size={"sm"}
-          variant={"ghost"}
-          className="flex items-center gap-1"
-          onClick={() => router.push(`/${slug}`)}
-        >
-          Read More
-          <ArrowUpRight size={16} />
-        </Button>
       </div>
     </div>
   );

@@ -10,24 +10,21 @@ import { sortPostsByDate } from "~/lib/posts";
 import { notes } from "#site/content";
 
 export default function Home() {
-  const basicInfo =
-    "I'm a self-taught software engineer from the Kashmir, India. I'm currently pursuing full-stack web development and Android Development to create stunning user experiences on the front-end, and scalable and secure infrastructure on the backend.";
+  const basicInfo = 
+  "Self-taught software engineer from Kashmir, India, passionate about crafting exceptional web and Android experiences. I specialize in full-stack development with a focus on intuitive UX and robust backend architecture.";
 
-  const aboutMe1 =
-    "👋 Hello, I'm a front-end web and android developer and recently graduated from high school, This year my primary focus is gonna be improve my coding skills and sooner or later i will start DSA journey and get into competitive programming.";
+const aboutMe1 = 
+  "👋 Fresh high school graduate diving deep into front-end web and Android development. Currently focused on expanding my technical expertise and preparing to explore DSA and competitive programming.";
 
-  const aboutMe2 =
-    "However, I remain excited to expanding my network. Feel free to reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.in) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/hellofaizaan) or schedule a meet on [cal.com ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet) if you would like to connect or simply have a friendly chat.";
+const aboutMe2 = 
+  "Let's connect! Reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.in) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/hellofaizaan) to discuss tech, collaborate on projects, or just have an engaging conversation.";
 
-  const aboutMe3 =
-    "I'm very curious about AI, open source, internet startups, SaaS, developer tools and beautiful UX! Drop me a msg via my [discord server ![discord](/companylogo/discord.svg)](https://discord.gg/vUHMxPvege) if you'd like to hear my thoughts on what you're working on.";
-
-  const info = ` 
+const info = `
   - **Mohammad Faizan**
-  - Jammu and kashmir, India 🇮🇳
-  - Birthday: 13 Sep, 07 • 7teeeeeeen (17)
-  - I also enjoy Chess, Football, IoT and travelling
-  - Have an idea? Let's [discuss ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
+  - Kashmir, India 🇮🇳
+  - Self-taught Developer • Full-stack Enthusiast
+  - Tech stack: Web Development, Android, IoT
+  - [Book a chat ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
 
   const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
@@ -42,13 +39,12 @@ export default function Home() {
       <div className="flex flex-col gap-3">
         <AboutMe text={aboutMe1} />
         <AboutMe text={aboutMe2} />
-        <AboutMe text={aboutMe3} />
         <AboutMe text={info} />
       </div>
 
       <MainSkills />
 
-      <SectionSeparator title="PROJECTS" link="/projects" />
+      <SectionSeparator title="PROJECTS" /> {/* link="/projects" */}
       <Pinnedprojects />
 
       {featNotes.length > 0 && (

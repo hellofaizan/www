@@ -1,12 +1,16 @@
+"use client";
+
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import { Button } from "~/components/ui/button";
 import { notes } from "#site/content";
 import React from "react";
 import { sortPostsByDate } from "~/lib/posts";
 import PostList from "./components/postlist";
+import { useRouter } from "next/navigation";
 
 export default function page() {
   const displayPosts = sortPostsByDate(notes.filter((post) => post.published));
+  const router = useRouter();
   return (
     <div>
       <h1 className="text-3xl font-bold">Notes</h1>
@@ -17,7 +21,8 @@ export default function page() {
             displayPosts.map((post) => (
               <div
                 key={post.slug}
-                className="flex w-full flex-col gap-2 rounded-lg border p-2 px-3"
+                className="flex w-full flex-col gap-2 rounded-lg border p-2 px-3 hover:border-foreground/20"
+                onClick={() => router.push(`/${post.slug}`)}
               >
                 <PostList
                   slug={post.slug}
