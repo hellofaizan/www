@@ -19,7 +19,7 @@ export default function Profile() {
         <h1 className="text-2xl md:text-5xl font-istok font-bold">
           Hey, I&apos;m Faizan
         </h1>
-        <p className="md:text-lg font-light dark:text-[#C0C0C0]">A Full stack web and android developer</p>
+        <p className="md:text-lg font-light dark:text-[#C0C0C0]">A full stack web and android developer</p>
       </div>
     </div>
   );
