@@ -13,6 +13,11 @@ import { Separator } from "~/components/ui/separator";
 export default function Socials() {
   const socials = [
     {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/hellofaizaan/",
+      icon: "linkedin",
+    },
+    {
       name: "GitHub",
       link: "https://github.com/hellofaizan",
       icon: "github",
@@ -26,11 +31,6 @@ export default function Socials() {
       name: "X/Twitter",
       link: "https://x.com/hellofaizaan",
       icon: "x",
-    },
-    {
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/hellofaizaan/",
-      icon: "linkedin",
     },
     {
       name: "Instagram",

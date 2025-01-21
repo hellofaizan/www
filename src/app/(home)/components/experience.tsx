@@ -22,18 +22,16 @@ export default function Experience() {
     <div className="w-full">
       {experienceData.map((company, index) => (
         <div className="flex flex-col items-start px-2 gap-[2px]" key={index}>
-          <Link
-            href={company.link}
-            target="_blank"
-            className="flex items-center gap-3"
-          >
-            <Image
-              src={company.logo}
-              alt={company.company}
-              width={58}
-              height={58}
-              className="w-[58px] h-[58px] rounded-sm"
-            />
+          <div className="flex items-center gap-3">
+            <Link href={company.link} target="_blank">
+              <Image
+                src={company.logo}
+                alt={company.company}
+                width={58}
+                height={58}
+                className="w-[58px] h-[58px] rounded-sm"
+              />
+            </Link>
             <div className="flex flex-col">
               <p className="font-bold">{company.jobTitle}</p>
               <p className="text-base font-medium text-muted-foreground">
@@ -48,7 +46,7 @@ export default function Experience() {
               </p>
               <p className="text-sm text-muted-foreground">{`${company.startDate} - ${company.endDate}`}</p>
             </div>
-          </Link>
+          </div>
           <div className="text-sm text-muted-foreground flex items-center gap-1">
             <GemIcon size={15} /> {company.skills}
           </div>
