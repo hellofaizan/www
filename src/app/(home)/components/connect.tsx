@@ -7,9 +7,9 @@ import { Button } from "~/components/ui/button";
 export default function Connect() {
   return (
     <div className="flex md:items-center md:justify-between flex-col md:flex-row gap-2">
-      <div className="dark:bg-muted bg-muted-foreground/25 px-4 rounded-full flex  items-center gap-2 w-max py-[2px]">
+      <div className="dark:bg-muted bg-muted-foreground/10 px-4 rounded-full flex  items-center gap-2 w-max py-[2px]">
         <span className="animate-pulse">~</span>
-        building internet products
+        Open for work
       </div>
 
       <div className="flex items-center gap-1 justify-end">

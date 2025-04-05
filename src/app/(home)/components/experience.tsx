@@ -14,7 +14,7 @@ export default function Experience() {
       startDate: "Oct 2024",
       endDate: "Present",
       location: "",
-      skills: "Next JS, React JS, Prisma ORM, AWS Lambda, Ffmpeg, PostgreSQL",
+      skills: "Next JS, Prisma ORM, AWS Lambda, Ffmpeg, PostgreSQL",
     },
   ];
 
@@ -47,7 +47,7 @@ export default function Experience() {
               <p className="text-sm text-muted-foreground">{`${company.startDate} - ${company.endDate}`}</p>
             </div>
           </div>
-          <div className="text-sm text-muted-foreground flex items-center gap-1">
+          <div className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
             <GemIcon size={15} /> {company.skills}
           </div>
         </div>

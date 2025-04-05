@@ -15,7 +15,7 @@ export default function Pinnedprojects() {
       description: "Get anonymous confession, questions and testimonials from the online world",
       logo: "/projectlogos/pouzz.svg",
       link: "https://pouzz.xyz",
-      status: "LIVE",
+      status: "WIP",
     },
   ];
   return (

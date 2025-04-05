@@ -73,7 +73,7 @@ export default function Socials() {
           key={social.name}
         >
           <span className="text-lg font-medium">{social.name}</span>
-          <Separator className="flex-1" />
+          <Separator className="flex-1"/>
           {socialIcons(social.icon)}
         </Link>
       ))}

@@ -58,7 +58,7 @@ export default function AboutMe(props: AboutMeProps) {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-blue-500  decoration-dashed underline-offset-4"
+              className="underline hover:text-blue-500 decoration-dashed underline-offset-4"
               {...props}
             >
               {children}
@@ -74,12 +74,12 @@ export default function AboutMe(props: AboutMeProps) {
         ul: ({ node, ...props }: any) => (
           <ul
             className={
-              "ml-2 md:ml-3 list-inside list-disc dark:text-[rgb(192,192,192)] text-sm md:text-lg"
+              "ml-2 md:ml-2 list-inside list-disc dark:text-[rgb(192,192,192)] text-sm md:text-base"
             }
             {...props}
           />
         ),
-        li: ({ node, ...props }: any) => <li className={"mt-1"} {...props} />,
+        li: ({ node, ...props }: any) => <li {...props} />,
       }}
     >
       {props.text}

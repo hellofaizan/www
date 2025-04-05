@@ -12,10 +12,10 @@ import Experience from "./components/experience";
 
 export default function Home() {
   const basicInfo =
-    "Self-taught software engineer from Kashmir, India, passionate about crafting exceptional web and Android experiences. I specialize in full-stack development with a focus on intuitive UX and robust backend architecture.";
+    "Self-taught software engineer from Kashmir, India, passionate about building seamless web and Android experiences with a focus on intuitive UX and scalable backend systems.";
 
   const aboutMe1 =
-    "👋 Just a college kid diving deep into front-end web and android development. Currently focusing on expanding my technical expertise and preparing to explore DSA and competitive programming.";
+    "Just a college kid diving into front-end web and Android development. Currently focused on sharpening my skills and gearing up for DSA and competitive programming.";
 
   const aboutMe2 =
     "Let's connect! Reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.in) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/hellofaizaan) to discuss tech, collaborate on projects, or just have an engaging conversation.";
@@ -29,7 +29,7 @@ export default function Home() {
   const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
   return (
-    <div className="flex flex-col gap-6 md:gap-8">
+    <div className="flex flex-col gap-6 md:gap-7">
       <Profile />
       <AboutMe text={basicInfo} />
       <Connect />

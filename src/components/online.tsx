@@ -39,8 +39,8 @@ const Online = () => {
               : data?.data?.discord_status
           }
         >
-          <span className="absolute bottom-0 right-0 md:right-2 md:bottom-2 bg-green-500 rounded-full h-5 w-5 border-4 dark:border-[#1d181f] animate-ping" />
-          <span className="absolute bottom-0 right-0 md:right-2 md:bottom-2 bg-green-500 rounded-full h-5 w-5 border-4 dark:border-[#1d181f]" />
+          <span className="absolute bottom-1 right-1 md:right-[6px] md:bottom-[6px] bg-green-500 rounded-full h-2 md:h-3 w-2 md:w-3 dark:border-[#1d181f] animate-ping" />
+          <span className="absolute bottom-1 right-1 md:right-[6px] md:bottom-[6px] bg-green-500 rounded-full h-2 md:h-3 w-2 md:w-3 dark:border-[#1d181f]" />
         </span>
       )}
     </Suspense>
