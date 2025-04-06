@@ -26,24 +26,24 @@ const navLinks = [
 
 const socialLinks = [
   {
-    link: "/",
-    name: "GitHub",
-  },
-  {
-    link: "/",
     name: "LinkedIn",
+    link: "https://www.linkedin.com/in/hellofaizaan/",
   },
   {
-    link: "/",
+    name: "GitHub",
+    link: "https://github.com/hellofaizan",
+  },
+  {
     name: "Peerlist",
+    link: "https://peerlist.io/hellofaizaan",
   },
   {
-    link: "/",
-    name: "Twitter",
+    name: "X/Twitter",
+    link: "https://x.com/hellofaizaan",
   },
   {
-    link: "/",
     name: "Instagram",
+    link: "https://www.instagram.com/hellofaizaan",
   },
 ];
 
@@ -98,6 +98,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.link}
+                    target="_blank"
                     className="text-neutral-500 dark:hover:text-neutral-200 hover:text-neutral-600 transition-colors"
                   >
                     {link.name}
@@ -132,7 +133,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconBrandX className="hover:scale-105 cursor-pointer" />
+            <IconBrandX className="hover:scale-105 cursor-pointer hover:text-black dark:hover:text-white" />
           </a>
           <span>and</span>
           <a

@@ -7,7 +7,7 @@ export default function Hire() {
     <div className="border p-4 w-full rounded-sm bg-blue-400/10 dark:bg-[#a0a0a014] border-blue-400/30 dark:border-muted overflow-hidden">
       <div className="flex items-start flex-col">
         <p className="text-xl font-bold">
-          Want to hire me as a freelancer? let's dicuss.
+          Want to hire me as a freelancer?
         </p>
         <p className="text-sm">
           Drop your message and let's discuss about your project.

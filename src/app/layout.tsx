@@ -5,6 +5,8 @@ import { ThemeProvider } from "~/hooks/theme-provider";
 import { Navbar } from "~/components/nav";
 import Script from "next/script";
 import { Toaster } from "~/components/ui/sonner";
+import { SidebarProvider } from "~/components/ui/sidebar";
+import { AppSidebar } from "~/components/sidebar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohammadfaizan.in"),
@@ -147,17 +149,20 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex-auto min-w-0 flex flex-col md:px-0 container md:max-w-3xl mx-auto w-full px-0 md:pt-14 pb-6 md:pb-8">
-            <div className="flex-1">
-              <Navbar />
-              <div className="px-5 md:px-0">{children}</div>
-              <Toaster />
+          <SidebarProvider>
+            <AppSidebar />
+            <div className="flex-auto min-w-0 flex flex-col md:px-0 container md:max-w-3xl mx-auto w-full px-0 md:pt-14 pb-6 md:pb-8">
+              <div className="flex-1">
+                <Navbar />
+                <div className="px-5 md:px-0">{children}</div>
+                <Toaster />
+              </div>
             </div>
-          </div>
+          </SidebarProvider>
         </ThemeProvider>
         <Script
           defer
-          src="https://stats.hellofaizan.tech/script.js"
+          src="https://umami-beta-seven.vercel.app/script.js"
           data-website-id="92e2a7bc-f079-4387-be70-0ad0b202b7a8"
         ></Script>
       </body>

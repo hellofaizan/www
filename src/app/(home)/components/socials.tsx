@@ -70,10 +70,11 @@ export default function Socials() {
         <Link
           className="flex items-baseline gap-2 text-muted-foreground hover:dark:text-[rgb(192,192,192)] hover:text-muted-foreground text-[#2f2f2f] dark:text-muted-foreground"
           href={social.link}
+          target="_blank"
           key={social.name}
         >
           <span className="text-lg font-medium">{social.name}</span>
-          <Separator className="flex-1"/>
+          <Separator className="flex-1" />
           {socialIcons(social.icon)}
         </Link>
       ))}

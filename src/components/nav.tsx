@@ -7,6 +7,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "~/lib/utils";
 import { ModeToggle } from "./ModeToggle";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const navItems = {
   "/projects": {
@@ -28,8 +29,8 @@ export function Navbar() {
   };
 
   return (
-    <nav className="flex flex-row md:mb-16 mb-14 border-b dark:border-[#838383]/25 border-[#606060]/45 md:border-none sticky top-0 z-50">
-      <div className="flex items-center justify-between text-lg px-5 md:px-0 w-full md:border md:border-[#838383]/45 md:rounded-md md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-3xl">
+    <nav className="flex flex-row md:mb-16 mb-14 border-b dark:border-[#838383]/25 border-[#606060]/45 md:border-none sticky top-0 md:top-2 z-50">
+      <div className="flex md:px-3 items-center justify-between text-lg px-5 w-full md:border md:border-[#838383]/45 md:rounded-md md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-3xl">
         <div className="flex flex-row items-center flex-1 gap-4 md:pl-2">
           <Image src="/faizan.png" width={40} height={40} alt="Hellofaizan" />
           <div className="hidden md:flex items-center gap-1">
@@ -67,13 +68,9 @@ export function Navbar() {
 
         <div className="flex gap-1 items-center">
           <ModeToggle className="border-none hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0]" />
-          <Button
-            variant={"ghost"}
-            size={"icon"}
-            className="flex-row items-center flex hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0] md:hidden"
-          >
-            <Menu className="rounded" />
-          </Button>
+          <div className="md:hidden">
+            <SidebarTrigger />
+          </div>
         </div>
       </div>
     </nav>
