@@ -159,7 +159,7 @@ export default function RootLayout({
                 <Navbar />
                 <div className="px-5 md:px-0">{children}</div>
 
-                <div className="flex flex-col gap-2 mt-7">
+                <div className="flex flex-col gap-2 mt-7 px-5 md:px-0">
                   <Hire />
                   <Separator className="w-full my-5 bg-muted-foreground/35" />
                   <Footer />
