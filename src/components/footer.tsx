@@ -7,19 +7,19 @@ const navLinks = [
     name: "Home",
   },
   {
-    link: "/",
+    link: "/notes",
     name: "Blog",
   },
   {
-    link: "/",
-    name: "Dashboard",
+    link: "/stats",
+    name: "Stats",
   },
   {
-    link: "/",
+    link: "/projects",
     name: "Projects",
   },
   {
-    link: "/",
+    link: "/links",
     name: "Links",
   },
 ];
@@ -73,7 +73,7 @@ const resourceLinks = [
 export default function Footer() {
   return (
     <footer>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3">
           {/* Navigation Links */}
           <div className="space-y-3">
@@ -126,7 +126,7 @@ export default function Footer() {
         </div>
 
         {/* Find me text */}
-        <div className="mt-8 flex items-center justify-start space-x-2 text-neutral-500">
+        <div className="mt-6 flex items-center justify-start space-x-2 text-neutral-500">
           <span>Find me on</span>
           <a
             href="https://x.com/hellofaizaan"

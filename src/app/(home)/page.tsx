@@ -9,9 +9,6 @@ import FeatNotes from "./components/FeatNotes";
 import { sortPostsByDate } from "~/lib/posts";
 import { notes } from "#site/content";
 import Experience from "./components/experience";
-import Hire from "~/components/hire";
-import Footer from "~/components/footer";
-import { Separator } from "~/components/ui/separator";
 
 export default function Home() {
   const basicInfo =
@@ -25,50 +22,35 @@ export default function Home() {
 
   const info = `
   - Mohammad Faizan
-  - Kashmir, India
-  - [Book a chat ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)
-  - Tech stack`;
+  - [Book a chat ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
 
   const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
   return (
     <div className="flex flex-col gap-6 md:gap-7">
       <Profile />
-
       <AboutMe text={basicInfo} />
-
       <Connect />
-
       <SectionSeparator title="ABOUT ME" />
-
       <div className="flex flex-col gap-3">
         <AboutMe text={aboutMe1} />
         <AboutMe text={aboutMe2} />
         <AboutMe text={info} />
       </div>
-
       <MainSkills />
-
       <SectionSeparator title="EXPERIENCE" /> {/* link="/projects" */}
       <Experience />
-
-      <SectionSeparator title="PROJECTS" /> {/* link="/projects" */}
+      <SectionSeparator title="PROJECTS" link="/projects" />{" "}
+      {/* link="/projects" */}
       <Pinnedprojects />
-
       {featNotes.length > 0 && (
         <>
           <SectionSeparator title="NOTES" link="/notes" />
           <FeatNotes />
         </>
       )}
-
       <SectionSeparator title="FIND ME AROUND GLOBE" />
       <Socials />
-
-      <Hire />
-      
-      <Separator className="w-full my-5 bg-muted-foreground/35" />
-      <Footer />
     </div>
   );
 }

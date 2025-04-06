@@ -7,6 +7,9 @@ import Script from "next/script";
 import { Toaster } from "~/components/ui/sonner";
 import { SidebarProvider } from "~/components/ui/sidebar";
 import { AppSidebar } from "~/components/sidebar";
+import Hire from "~/components/hire";
+import Footer from "~/components/footer";
+import { Separator } from "~/components/ui/separator";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohammadfaizan.in"),
@@ -155,6 +158,12 @@ export default function RootLayout({
               <div className="flex-1">
                 <Navbar />
                 <div className="px-5 md:px-0">{children}</div>
+
+                <div className="flex flex-col gap-2 mt-7">
+                  <Hire />
+                  <Separator className="w-full my-5 bg-muted-foreground/35" />
+                  <Footer />
+                </div>
                 <Toaster />
               </div>
             </div>

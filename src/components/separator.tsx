@@ -1,4 +1,4 @@
-import { ExternalLink, MoveUpRightIcon } from "lucide-react";
+import { ExternalLink, LinkIcon, MoveUpRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { Separator } from "~/components/ui/separator";
@@ -20,8 +20,8 @@ export default function SectionSeparator(props: SeparatorProps) {
             href={props.link}
             className="border rounded-lg px-3 flex items-center gap-1"
           >
-            <span>{props.linkText || "more"}</span>
-            <ExternalLink size={12} />
+            <span>{props.linkText || "all"}</span>
+            <LinkIcon size={12} />
           </Link>
         )}
       </div>

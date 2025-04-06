@@ -15,11 +15,11 @@ export default function Hire() {
         <Link
           href={"https://api.whatsapp.com/send?phone=916005131341"}
           target="_blank"
-          className="px-2 rounded-md bg-green-400 py-1 text-sm font-bold mt-1 text-black"
+          className="px-2 rounded-md bg-green-400 py-1 text-sm font-bold mt-2 text-black"
         >
           Chat on WhatsApp
         </Link>
-        <Separator className="w-full my-7 bg-muted-foreground/35" />
+        <Separator className="w-full my-5 bg-muted-foreground/35" />
         <p className="">Drop in your email ID and I will get back to you.</p>
         <EmailForm />
       </div>
