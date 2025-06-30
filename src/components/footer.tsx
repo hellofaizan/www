@@ -147,7 +147,7 @@ export default function Footer() {
             <img
               className="ml-1 h-[22px] w-[22px] hover:scale-105 grayscale hover:grayscale-0 cursor-pointer"
               src="/companylogo/peerlistlogo.svg"
-              alt="peerlist"
+              alt=""
             />
             <span className="sr-only">Peerlist</span>
           </a>
