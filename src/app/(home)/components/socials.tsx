@@ -56,7 +56,7 @@ export default function Socials() {
           <img
             className="ml-1 h-[20px] w-[20px] hover:scale-105 grayscale hover:grayscale-0"
             src="/companylogo/peerlistlogo.svg"
-            alt="peerlist"
+            alt=""
           />
         );
       default:
