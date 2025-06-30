@@ -17,9 +17,9 @@ export default function Profile() {
       </div>
       <div className="flex flex-col items-start">
         <h1 className="text-2xl md:text-6xl font-istok font-bold">
-          It&apos;s me, Faizan
+          Mohammad Faizan
         </h1>
-        <p className="md:text-lg font-light dark:text-[#C0C0C0]">A full stack web and android developer</p>
+        <p className="md:text-lg font-light dark:text-[#C0C0C0]">A full stack web and app developer</p>
       </div>
     </div>
   );

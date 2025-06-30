@@ -48,30 +48,39 @@ export default function Home() {
   const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
   return (
-    <div className="flex flex-col gap-6 md:gap-7">
+    <main className="flex flex-col gap-6 md:gap-7">
       <Profile />
       <AboutMe text={basicInfo} />
       <Connect />
       <SectionSeparator title="ABOUT ME" />
-      <div className="flex flex-col gap-3">
-        <AboutMe text={aboutMe1} />
-        <AboutMe text={aboutMe2} />
-        <AboutMe text={info} />
-      </div>
+      <section>
+        <div className="flex flex-col gap-3">
+          <AboutMe text={aboutMe1} />
+          <AboutMe text={aboutMe2} />
+          <AboutMe text={info} />
+        </div>
+      </section>
       <MainSkills />
-      <SectionSeparator title="EXPERIENCE" /> {/* link="/projects" */}
-      <Experience />
-      <SectionSeparator title="PROJECTS" link="/projects" />{" "}
-      {/* link="/projects" */}
-      <Pinnedprojects />
+      <SectionSeparator title="EXPERIENCE" />
+      <section>
+        <Experience />
+      </section>
+      <SectionSeparator title="PROJECTS" link="/projects" />
+      <section>
+        <Pinnedprojects />
+      </section>
       {featNotes.length > 0 && (
         <>
           <SectionSeparator title="NOTES" link="/notes" />
-          <FeatNotes />
+          <section>
+            <FeatNotes />
+          </section>
         </>
       )}
       <SectionSeparator title="FIND ME AROUND GLOBE" />
-      <Socials />
-    </div>
+      <section>
+        <Socials />
+      </section>
+    </main>
   );
 }

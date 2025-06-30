@@ -24,11 +24,16 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div>
-      <h1 className="text-xl flex items-center gap-2">
-        <TriangleAlert className="text-yellow-400" size={18}/>
-        Working on it...
+    <main>
+      <h1 className="text-3xl font-bold mb-4 flex items-center gap-2">
+        <TriangleAlert className="text-yellow-400" size={24}/>
+        Stats – Mohammad Faizan
       </h1>
-    </div>
+      <p className="mb-4 text-lg">View <strong>Mohammad Faizan portfolio statistics</strong>, achievements, and milestones. Track the growth and impact of my work as a web developer and software engineer.</p>
+      <h2 className="text-2xl font-semibold mb-2">Portfolio Statistics</h2>
+      <div className="text-lg flex items-center gap-2">
+        Working on it...
+      </div>
+    </main>
   );
 }

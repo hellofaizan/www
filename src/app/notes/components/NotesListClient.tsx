@@ -11,10 +11,9 @@ export default function NotesListClient() {
   const displayPosts = sortPostsByDate(notes.filter((post) => post.published));
   const router = useRouter();
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Notes</h1>
+    <main>
       <Separator className="my-4" />
-      <div>
+      <section>
         <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
           {displayPosts.length > 0 ? (
             displayPosts.map((post) => (
@@ -35,13 +34,13 @@ export default function NotesListClient() {
             ))
           ) : (
             <div className="flex w-full items-center justify-center">
-              <h1 className="text-3xl font-bold text-muted-foreground">
+              <h2 className="text-2xl font-semibold text-muted-foreground">
                 No Post Found
-              </h1>
+              </h2>
             </div>
           )}
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 } 

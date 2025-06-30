@@ -24,11 +24,10 @@ export const metadata: Metadata = {
 
 export default function page() {
   return (
-    <div>
-      <h1 className="text-xl flex items-center gap-2">
-        <TriangleAlert className="text-yellow-400" size={18}/>
+    <main>
+      <div className="text-lg flex items-center gap-2">
         Working on it...
-      </h1>
-    </div>
+      </div>
+    </main>
   );
 }

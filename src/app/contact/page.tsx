@@ -21,9 +21,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-4">Contact</h1>
+      <h1 className="text-3xl font-bold mb-4">Contact Mohammad Faizan</h1>
       <p className="mb-6">Feel free to reach out for collaborations, questions, or just to say hi!</p>
-      <EmailForm />
+      <section className="w-full max-w-md">
+        <h2 className="text-2xl font-semibold mb-2">Contact Form</h2>
+        <EmailForm />
+      </section>
     </main>
   );
 } 

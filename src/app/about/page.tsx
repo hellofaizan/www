@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="flex flex-col gap-8">
+      <h1 className="text-3xl font-bold mb-4">About Mohammad Faizan – Web Developer</h1>
       {/* <AboutMe /> */}
       <section className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-4 rounded-md">
         <h2 className="text-lg font-semibold mb-2">FAQ: Are you the cricketer Mohammad Faizan?</h2>
