@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import Head from "next/head";
-import dynamic from "next/dynamic";
-
-const NotesListClient = dynamic(() => import("./components/NotesListClient"), { ssr: false });
+import NotesListClient from "./components/NotesListClient";
 
 export const metadata: Metadata = {
   title: "Notes | Mohammad Faizan",

@@ -4,6 +4,13 @@ import ProjectCard from "~/components/projectcard";
 export default function Pinnedprojects() {
   const Pinnedprojects = [
     {
+      title: "Logo Tweak",
+      description: "Design stunning logos instantly with LogoTweak, fully open source and free to use.",
+      logo: "/projectlogos/logotweak.svg",
+      link: "https://logotweak.mohammadfaizan.in",
+      status: "Live",
+    },
+    {
       title: "Tielinks",
       description: "A super cool link in bio website to showcase your links in a beautiful way.",
       logo: "/projectlogos/tielinks.svg",

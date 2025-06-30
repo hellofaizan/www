@@ -1,7 +1,6 @@
 "use client";
 
 import { Separator } from "@radix-ui/react-dropdown-menu";
-import { Button } from "~/components/ui/button";
 import { notes } from "#site/content";
 import React from "react";
 import { sortPostsByDate } from "~/lib/posts";

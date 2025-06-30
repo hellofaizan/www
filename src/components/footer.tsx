@@ -132,20 +132,24 @@ export default function Footer() {
             href="https://x.com/hellofaizaan"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="X (formerly Twitter)"
           >
             <IconBrandX className="hover:scale-105 cursor-pointer hover:text-black dark:hover:text-white" />
+            <span className="sr-only">X (formerly Twitter)</span>
           </a>
           <span>and</span>
           <a
             href="https://peerlist.io/hellofaizan"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Peerlist"
           >
             <img
               className="ml-1 h-[22px] w-[22px] hover:scale-105 grayscale hover:grayscale-0 cursor-pointer"
               src="/companylogo/peerlistlogo.svg"
               alt="peerlist"
             />
+            <span className="sr-only">Peerlist</span>
           </a>
         </div>
       </div>

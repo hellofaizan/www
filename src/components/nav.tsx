@@ -40,8 +40,10 @@ export function Navbar() {
                 "flex items-center gap-[2px] cursor-pointer hover:dark:text-neutral-200 hover:text-neutral-900 hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0] rounded-md align-middle px-2 py-[6px]",
                 pathname === "/" && "bg-gray-500/10 dark:text-white"
               )}
+              aria-label="Home"
             >
               <Home size={17} />
+              <span className="sr-only">Home</span>
             </Link>
             {Object.entries(navItems).map(([path, { name }]) => {
               return (

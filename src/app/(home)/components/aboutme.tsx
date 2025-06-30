@@ -38,11 +38,14 @@ export default function AboutMe(props: AboutMeProps) {
               >
                 {childrenArray.map((child, index) => {
                   if (isChildElement(child) && child.type === "img") {
+                    const hasTextSibling = childrenArray.some(
+                      (c) => typeof c === "string" && c.trim().length > 0
+                    );
                     return (
                       <Image
                         key={index}
                         src={child.props.src || ""}
-                        alt={child.props.alt || ""}
+                        alt={hasTextSibling ? "" : (child.props.alt || "")}
                         width={20}
                         height={20}
                         className="w-4 h-4"
