@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import AboutMe from "../(home)/components/aboutme";
 
 export const metadata: Metadata = {
   title: "About | Mohammad Faizan - Web Developer, Not Cricketer",

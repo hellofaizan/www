@@ -1,5 +1,3 @@
-"use client";
-
 import { TriangleAlert } from "lucide-react";
 import React from "react";
 import { Metadata } from "next";
