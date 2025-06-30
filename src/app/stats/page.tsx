@@ -2,6 +2,27 @@
 
 import { TriangleAlert } from "lucide-react";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Stats | Mohammad Faizan",
+  description: "View Mohammad Faizan's portfolio statistics and achievements.",
+  openGraph: {
+    title: "Stats | Mohammad Faizan",
+    description: "View Mohammad Faizan's portfolio statistics and achievements.",
+    url: "https://mohammadfaizan.in/stats",
+    siteName: "Mohammad Faizan Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stats | Mohammad Faizan",
+    description: "View Mohammad Faizan's portfolio statistics and achievements.",
+  },
+  alternates: {
+    canonical: "https://mohammadfaizan.in/stats",
+  },
+};
 
 export default function page() {
   return (

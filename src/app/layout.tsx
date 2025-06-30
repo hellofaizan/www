@@ -10,6 +10,8 @@ import { AppSidebar } from "~/components/sidebar";
 import Hire from "~/components/hire";
 import Footer from "~/components/footer";
 import { Separator } from "~/components/ui/separator";
+import { ReactNode } from "react";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohammadfaizan.in"),
@@ -118,6 +120,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Mohammad Faizan",
+              "jobTitle": "Web Developer, Software Engineer",
+              "description": "Mohammad Faizan is a web developer and software engineer from Kashmir, India. Not the Pakistani cricketer.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kashmir",
+                "addressCountry": "India"
+              },
+              "url": "https://mohammadfaizan.in/",
+              "sameAs": [
+                "https://twitter.com/hellofaizan",
+                "https://github.com/hellofaizan"
+              ]
+            })
+          }}
+        />
+      </Head>
       <head>
         <link
           rel="apple-touch-icon"

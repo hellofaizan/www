@@ -9,6 +9,27 @@ import FeatNotes from "./components/FeatNotes";
 import { sortPostsByDate } from "~/lib/posts";
 import { notes } from "#site/content";
 import Experience from "./components/experience";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mohammad Faizan | Portfolio, Projects, Notes, and More",
+  description: "Welcome to Mohammad Faizan's portfolio. Explore projects, notes, experience, and ways to connect. Web developer, designer, and creator.",
+  openGraph: {
+    title: "Mohammad Faizan | Portfolio, Projects, Notes, and More",
+    description: "Welcome to Mohammad Faizan's portfolio. Explore projects, notes, experience, and ways to connect. Web developer, designer, and creator.",
+    url: "https://mohammadfaizan.in/",
+    siteName: "Mohammad Faizan Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohammad Faizan | Portfolio, Projects, Notes, and More",
+    description: "Welcome to Mohammad Faizan's portfolio. Explore projects, notes, experience, and ways to connect. Web developer, designer, and creator.",
+  },
+  alternates: {
+    canonical: "https://mohammadfaizan.in/",
+  },
+};
 
 export default function Home() {
   const basicInfo =
