@@ -77,7 +77,7 @@ const socials = [
   },
   {
     name: "X/Twitter",
-    link: "https://x.com/hellofaizaan",
+    link: "https://x.com/mofaizandev",
     icon: "x",
   },
   {
