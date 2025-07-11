@@ -72,6 +72,7 @@ export default function Socials() {
           href={social.link}
           target="_blank"
           key={social.name}
+          data-sln-event={`user: ${social.name} visited`}
         >
           <span className="text-lg font-medium">{social.name}</span>
           <Separator className="flex-1" />

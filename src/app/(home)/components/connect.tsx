@@ -15,6 +15,7 @@ export default function Connect() {
       <div className="flex items-center gap-1 justify-end">
         <Link href="https://twitter.com/hellofaizaan" target="_blank">
           <Button
+            data-sln-event="user: Twitter button clicked"
             variant={"default"}
             className="rounded-full border border-muted px-6 bg-[#070707] text-white hover:bg-[#0f0f0f] flex items-center gap-1"
           >
@@ -24,6 +25,7 @@ export default function Connect() {
         </Link>
         <Link href="https://www.linkedin.com/in/hellofaizaan/" target="_blank">
           <Button
+            data-sln-event="user: LinkedIn button clicked"
             variant={"default"}
             className="rounded-full border border-muted px-6 bg-[#345FCD] text-white hover:bg-[#2760f0] flex items-center gap-1"
           >

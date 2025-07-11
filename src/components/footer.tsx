@@ -83,6 +83,7 @@ export default function Footer() {
                   <Link
                     href={link.link}
                     className="text-neutral-500 dark:hover:text-neutral-200 hover:text-neutral-600 transition-colors"
+                    data-sln-event={`footer: ${link.name} visited`}
                   >
                     {link.name}
                   </Link>
@@ -100,6 +101,7 @@ export default function Footer() {
                     href={link.link}
                     target="_blank"
                     className="text-neutral-500 dark:hover:text-neutral-200 hover:text-neutral-600 transition-colors"
+                    data-sln-event={`footer: ${link.name} visited`}
                   >
                     {link.name}
                   </Link>
@@ -116,7 +118,8 @@ export default function Footer() {
                   <Link
                     href={link.link}
                     className="text-neutral-500 dark:hover:text-neutral-200 hover:text-neutral-600 transition-colors"
-                  >
+                    data-sln-event={`footer: ${link.name} visited`}
+                   >
                     {link.name}
                   </Link>
                 </li>
@@ -129,10 +132,11 @@ export default function Footer() {
         <div className="mt-6 flex items-center justify-start space-x-2 text-neutral-500">
           <span>Find me on</span>
           <a
-            href="https://x.com/hellofaizaan"
+            href="https://x.com/mofaizandev"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (formerly Twitter)"
+            data-sln-event={`footer: Twitter visited`}
           >
             <IconBrandX className="hover:scale-105 cursor-pointer hover:text-black dark:hover:text-white" />
             <span className="sr-only">X (formerly Twitter)</span>
@@ -143,6 +147,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Peerlist"
+            data-sln-event={`footer: Peerlist visited`}
           >
             <img
               className="ml-1 h-[22px] w-[22px] hover:scale-105 grayscale hover:grayscale-0 cursor-pointer"

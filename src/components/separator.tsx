@@ -18,6 +18,7 @@ export default function SectionSeparator(props: SeparatorProps) {
         {props.link && (
           <Link
             href={props.link}
+            data-sln-event={`user: Section visited: ${props.title}`}
             className="border rounded-lg px-3 flex items-center gap-1"
           >
             <span>{props.linkText || "all"}</span>

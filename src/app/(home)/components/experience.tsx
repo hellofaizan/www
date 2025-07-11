@@ -23,7 +23,11 @@ export default function Experience() {
       {experienceData.map((company, index) => (
         <div className="flex flex-col items-start px-2 gap-[2px]" key={index}>
           <div className="flex items-center gap-3">
-            <Link href={company.link} target="_blank">
+            <Link
+              href={company.link}
+              target="_blank"
+              data-sln-event="user: Company visited"
+            >
               <Image
                 src={company.logo}
                 alt={company.company}
@@ -39,6 +43,7 @@ export default function Experience() {
                   href={company.link}
                   className="hover:text-blue-500 hover:underline"
                   target="_blank"
+                  data-sln-event="user: Company visited"
                 >
                   {company.company}
                 </Link>{" "}

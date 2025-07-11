@@ -72,6 +72,7 @@ export default function EmailForm() {
           className="w-full rounded-md bg-transparent px-4 py-1 focus:outline-none"
           {...register("email")}
           required
+          data-sln-event="user: Email form submitted"
         />
         <Button
           disabled={disabled}

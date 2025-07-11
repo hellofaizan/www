@@ -16,6 +16,7 @@ export default function Hire() {
           href={"https://api.whatsapp.com/send?phone=916005131341"}
           target="_blank"
           className="px-2 rounded-md bg-green-400 py-1 text-sm font-bold mt-2 text-black"
+          data-sln-event="user: WhatsApp button clicked"
         >
           Chat on WhatsApp
         </Link>

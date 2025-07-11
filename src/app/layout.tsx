@@ -10,7 +10,6 @@ import { AppSidebar } from "~/components/sidebar";
 import Hire from "~/components/hire";
 import Footer from "~/components/footer";
 import { Separator } from "~/components/ui/separator";
-import { ReactNode } from "react";
 import Head from "next/head";
 
 export const metadata: Metadata = {
@@ -127,21 +126,28 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Mohammad Faizan",
-              "jobTitle": "Web Developer, Software Engineer",
-              "description": "Mohammad Faizan is a web developer and software engineer from Kashmir, India. Not the Pakistani cricketer.",
-              "address": {
+              name: "Mohammad Faizan",
+              jobTitle: "Web Developer, Software Engineer",
+              description:
+                "Mohammad Faizan is a web developer and software engineer from Kashmir, India. Not the Pakistani cricketer.",
+              address: {
                 "@type": "PostalAddress",
-                "addressLocality": "Kashmir",
-                "addressCountry": "India"
+                addressLocality: "Kashmir",
+                addressCountry: "India",
               },
-              "url": "https://mohammadfaizan.in/",
-              "sameAs": [
+              url: "https://mohammadfaizan.in/",
+              sameAs: [
                 "https://twitter.com/hellofaizan",
-                "https://github.com/hellofaizan"
-              ]
-            })
+                "https://github.com/hellofaizan",
+              ],
+            }),
           }}
+        />
+        {/* Seline Analytics */}
+        <Script
+          src="https://cdn.seline.com/seline.js"
+          data-token="e7f537364cf1487"
+          strategy="afterInteractive"
         />
       </Head>
       <head>
