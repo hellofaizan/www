@@ -72,7 +72,7 @@ const socials = [
   },
   {
     name: "Peerlist",
-    link: "https://peerlist.io/hellofaizaan",
+    link: "https://peerlist.io/hellofaizan",
     icon: "peerlist",
   },
   {

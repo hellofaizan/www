@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     siteName: "Mohammad Faizan | Full Stack Android and Web Developer | India",
   },
   twitter: {
-    site: "@hellofaizaan",
+    site: "@mofaizandev",
     images: "/portfolio.png",
     card: "summary_large_image",
     title: "Mohammad Faizan | Full Stack Android and Web Developer | India",
     description:
       "Mohammad Faizan, experienced Full Stack Android and Web Developer and specializing in React, Arduino, Java, and Kotlin. Creating responsive web applications and native Android apps | Building internet products",
-    creator: "@hellofaizaan",
+    creator: "@mofaizandev",
   },
   keywords: [
     "Mohammad Faizan Developer Portfolio",
@@ -137,7 +137,7 @@ export default function RootLayout({
               },
               url: "https://mohammadfaizan.in/",
               sameAs: [
-                "https://twitter.com/hellofaizan",
+                "https://twitter.com/mofaizandev",
                 "https://github.com/hellofaizan",
               ],
             }),

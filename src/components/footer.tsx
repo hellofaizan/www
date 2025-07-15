@@ -35,11 +35,11 @@ const socialLinks = [
   },
   {
     name: "Peerlist",
-    link: "https://peerlist.io/hellofaizaan",
+    link: "https://peerlist.io/hellofaizan",
   },
   {
     name: "X/Twitter",
-    link: "https://x.com/hellofaizaan",
+    link: "https://x.com/mofaizandev",
   },
   {
     name: "Instagram",
