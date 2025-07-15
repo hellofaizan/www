@@ -12,7 +12,7 @@ export default function Experience() {
       link: "https://crito.design",
       logo: "/companylogo/crito.jpg",
       startDate: "Oct 2024",
-      endDate: "Present",
+      endDate: "Jun 2025 - 9 mos",
       location: "",
       skills: "Next JS, Prisma ORM, AWS Lambda, Ffmpeg, PostgreSQL",
     },
