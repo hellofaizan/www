@@ -39,7 +39,7 @@ const socialLinks = [
   },
   {
     name: "X/Twitter",
-    link: "https://x.com/mofaizandev",
+    link: "https://x.com/curiousfaizaan",
   },
   {
     name: "Instagram",
@@ -132,7 +132,7 @@ export default function Footer() {
         <div className="mt-6 flex items-center justify-start space-x-2 text-neutral-500">
           <span>Find me on</span>
           <a
-            href="https://x.com/mofaizandev"
+            href="https://x.com/curiousfaizaan"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (formerly Twitter)"

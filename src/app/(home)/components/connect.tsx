@@ -13,7 +13,7 @@ export default function Connect() {
       </div>
 
       <div className="flex items-center gap-1 justify-end">
-        <Link href="https://twitter.com/mofaizandev" target="_blank">
+        <Link href="https://twitter.com/curiousfaizaan" target="_blank">
           <Button
             data-sln-event="user: Twitter button clicked"
             variant={"default"}

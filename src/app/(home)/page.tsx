@@ -39,7 +39,7 @@ export default function Home() {
     "Just a college kid diving into front-end web and Android development. Currently focused on sharpening my skills and gearing up for DSA and competitive programming.";
 
   const aboutMe2 =
-    "Let's connect! Reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.in) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/mofaizandev) to discuss tech, collaborate on projects, or just have an engaging conversation.";
+    "Let's connect! Reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.in) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/curiousfaizaan) to discuss tech, collaborate on projects, or just have an engaging conversation.";
 
   const info = `
   - Mohammad Faizan
