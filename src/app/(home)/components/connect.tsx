@@ -9,7 +9,7 @@ export default function Connect() {
     <div className="flex md:items-center md:justify-between flex-col md:flex-row gap-2">
       <div className="dark:bg-muted bg-muted-foreground/10 px-4 rounded-full flex  items-center gap-2 w-max py-[2px]">
         <span className="animate-pulse">~</span>
-        Open for work
+        Open for collab
       </div>
 
       <div className="flex items-center gap-1 justify-end">

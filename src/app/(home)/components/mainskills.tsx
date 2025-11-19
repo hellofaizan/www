@@ -56,16 +56,16 @@ export default function MainSkills() {
         return (
           <div
             key={index}
-            className="flex items-center gap-2 border p-1 px-3 rounded-md"
+            className="flex items-center gap-2 border p-[3px] px-2 rounded-md md:p-1 md:px-3"
           >
             <Image
               src={item.logo}
               alt={item.name}
-              className="w-5 h-5"
+              className="w-4 h-4 md:w-5 md:h-5"
               width={32}
               height={32}
             />
-            <span className="text-sm font-medium">{item.name}</span>
+            <span className="text-xs md:text-sm font-medium">{item.name}</span>
           </div>
         );
       })}

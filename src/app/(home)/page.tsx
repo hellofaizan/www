@@ -34,17 +34,13 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const basicInfo =
-    "Self-taught software engineer from Kashmir, India, passionate about building seamless web and Android experiences with a focus on intuitive UX and scalable backend systems.";
+    "A builder a developer focused on AI, machine learning, mathematics, physics, and engineering. I love working at the intersection of code and real-world systems - experimenting with algorithms, automation, robotics, and drone tech.";
 
   const aboutMe1 =
-    "Just a college kid diving into front-end web and Android development. Currently focused on sharpening my skills and gearing up for DSA and competitive programming.";
+    "Most of my projects revolve around understanding how things work at a fundamental level, then using code to model, simulate, or improve them. I enjoy exploring applied math, physics driven systems, and the kind of engineering problems where software meets hardware.";
 
   const aboutMe2 =
-    "Let's connect! Reach out via [email ![Email](/companylogo/iemail.svg)](mailto:faizan@mohammadfaizan.com) or [twitter/X ![Twitter](/companylogo/twitter.svg)](https://x.com/curiousfaizaan) to discuss tech, collaborate on projects, or just have an engaging conversation.";
-
-  const info = `
-  - Mohammad Faizan
-  - [Book a chat ![Cal](/companylogo/calcom.svg)](https://cal.com/hellofaizan/personalmeet)`;
+    "When I’m not deep in code, I’m usually learning new concepts, building small hardware experiments, or testing ideas that push my understanding forward.";
 
   const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
@@ -58,7 +54,6 @@ export default function Home() {
         <div className="flex flex-col gap-3">
           <AboutMe text={aboutMe1} />
           <AboutMe text={aboutMe2} />
-          <AboutMe text={info} />
         </div>
       </section>
       <MainSkills />
