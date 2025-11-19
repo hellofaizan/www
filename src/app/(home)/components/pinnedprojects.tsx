@@ -7,7 +7,7 @@ export default function Pinnedprojects() {
       title: "Logo Tweak",
       description: "Design stunning logos instantly with LogoTweak, fully open source and free to use.",
       logo: "/projectlogos/logotweak.svg",
-      link: "https://logotweak.mohammadfaizan.in",
+      link: "https://logotweak.mohammadfaizan.com",
       status: "Live",
     },
     {
@@ -21,7 +21,7 @@ export default function Pinnedprojects() {
       title: "Pouzz App",
       description: "Get anonymous confession, questions and testimonials from the online world",
       logo: "/projectlogos/pouzz.svg",
-      link: "https://pouzz.xyz",
+      link: "https://pouzz-hellofaizans-projects.vercel.app/",
       status: "WIP",
     },
   ];

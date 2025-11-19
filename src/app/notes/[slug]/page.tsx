@@ -10,7 +10,7 @@ import {
   Edit,
   User2,
 } from "lucide-react";
-import Head from "next/head";
+import { Metadata } from "next";
 
 interface ParamsProps {
   params: {
@@ -25,7 +25,43 @@ async function getNotesFromParams(params: ParamsProps["params"]) {
 }
 
 export async function generateStaticParams(): Promise<ParamsProps["params"][]> {
-  return notes.map((post) => ({ slug: post.slug }));
+  return notes.map((post) => ({ slug: post.slugAsParams }));
+}
+
+export async function generateMetadata({
+  params,
+}: ParamsProps): Promise<Metadata> {
+  const post = await getNotesFromParams(params);
+
+  if (!post) {
+    return {};
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+    authors: { name: post.Author, url: post.AuthorUrl },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url: `https://mohammadfaizan.com/${post.slug}`,
+      images: [
+        {
+          url: `https://mohammadfaizan.com/api/og?title=${post.title}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [`https://mohammadfaizan.com/api/og?title=${post.title}`],
+    },
+  };
 }
 
 export default async function Page({ params }: ParamsProps) {
@@ -62,26 +98,24 @@ export default async function Page({ params }: ParamsProps) {
 
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              "headline": post.title,
-              "description": post.description || post.title,
-              "datePublished": post.date,
-              "author": {
-                "@type": "Person",
-                "name": post.Author,
-                ...(post.AuthorUrl ? { url: post.AuthorUrl } : {})
-              },
-              "url": `https://mohammadfaizan.in/notes/${params.slug}`
-            })
-          }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.description || post.title,
+            "datePublished": post.date,
+            "author": {
+              "@type": "Person",
+              "name": post.Author,
+              ...(post.AuthorUrl ? { url: post.AuthorUrl } : {})
+            },
+            "url": `https://mohammadfaizan.com/${post.slug}`
+          })
+        }}
+      />
       <article className="flex flex-col gap-6">
         <div className="flex items-center justify-between py-2 text-xs text-black/80 dark:text-white/80">
           <Link href="/notes">

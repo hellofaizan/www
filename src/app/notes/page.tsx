@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Head from "next/head";
+
 import NotesListClient from "./components/NotesListClient";
 
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Notes | Mohammad Faizan",
     description: "Read Mohammad Faizan's notes on web development, technology, and more.",
-    url: "https://mohammadfaizan.in/notes",
+    url: "https://mohammadfaizan.com/notes",
     siteName: "Mohammad Faizan Portfolio",
     type: "article",
   },
@@ -18,27 +18,25 @@ export const metadata: Metadata = {
     description: "Read Mohammad Faizan's notes on web development, technology, and more.",
   },
   alternates: {
-    canonical: "https://mohammadfaizan.in/notes",
+    canonical: "https://mohammadfaizan.com/notes",
   },
 };
 
 export default function NotesPage() {
   return (
     <>
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CollectionPage",
-              "name": "Notes | Faizan",
-              "description": "Read Faizan's notes on web development, technology, and more.",
-              "url": "https://mohammadfaizan.in/notes"
-            })
-          }}
-        />
-      </Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Notes | Faizan",
+            "description": "Read Faizan's notes on web development, technology, and more.",
+            "url": "https://mohammadfaizan.com/notes"
+          })
+        }}
+      />
       <NotesListClient />
     </>
   );

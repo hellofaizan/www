@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects | Mohammad Faizan",
     description: "Explore Mohammad Faizan's web development, design, and open source projects.",
-    url: "https://mohammadfaizan.in/projects",
+    url: "https://mohammadfaizan.com/projects",
     siteName: "Mohammad Faizan Portfolio",
     type: "website",
   },
@@ -18,13 +18,25 @@ export const metadata: Metadata = {
     description: "Explore Mohammad Faizan's web development, design, and open source projects.",
   },
   alternates: {
-    canonical: "https://mohammadfaizan.in/projects",
+    canonical: "https://mohammadfaizan.com/projects",
   },
 };
 
 export default function page() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Projects | Faizan",
+            "description": "Explore Mohammad Faizan's web development, design, and open source projects.",
+            "url": "https://mohammadfaizan.com/projects"
+          })
+        }}
+      />
       <div className="text-lg flex items-center gap-2">
         Working on it...
       </div>

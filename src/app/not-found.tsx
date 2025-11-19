@@ -1,4 +1,14 @@
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 - Page Not Found | Mohammad Faizan",
+  description: "Page not found.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
@@ -8,4 +18,4 @@ export default function NotFound() {
       <Link href="/" className="text-blue-600 hover:underline">Go back home</Link>
     </main>
   );
-} 
+}

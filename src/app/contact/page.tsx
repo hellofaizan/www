@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | Mohammad Faizan",
     description: "Contact Faizan via email form for inquiries, collaborations, or questions.",
-    url: "https://mohammadfaizan.in/contact",
+    url: "https://mohammadfaizan.com/contact",
     siteName: "Mohammad Faizan Portfolio",
     type: "website",
   },
   alternates: {
-    canonical: "https://mohammadfaizan.in/contact",
+    canonical: "https://mohammadfaizan.com/contact",
   },
 };
 

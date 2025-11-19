@@ -33,12 +33,12 @@ export default function Experience() {
                 alt={company.company}
                 width={58}
                 height={58}
-                className="w-[58px] h-[58px] rounded-sm"
+                className="w-[54px] h-[54px] md:w-[58px] md:h-[58px] rounded-sm"
               />
             </Link>
             <div className="flex flex-col">
               <p className="font-bold">{company.jobTitle}</p>
-              <p className="text-base font-medium text-muted-foreground">
+              <p className="text-xs md:text-base font-medium text-muted-foreground">
                 <Link
                   href={company.link}
                   className="hover:text-blue-500 hover:underline"

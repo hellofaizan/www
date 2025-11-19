@@ -1,5 +1,21 @@
 import { TriangleAlert } from "lucide-react";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Links | Mohammad Faizan",
+  description: "Browse important links and resources from Mohammad Faizan.",
+  openGraph: {
+    title: "Links | Mohammad Faizan",
+    description: "Browse important links and resources from Mohammad Faizan.",
+    url: "https://mohammadfaizan.com/links",
+    siteName: "Mohammad Faizan Portfolio",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://mohammadfaizan.com/links",
+  },
+};
 
 export default function page() {
   return (

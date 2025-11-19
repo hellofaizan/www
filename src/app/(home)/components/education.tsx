@@ -6,7 +6,7 @@ import React from "react";
 export default function Education() {
   const educationData = [
     {
-      institution: "National Institute of Technology, Srinagar",
+      institution: "NIT Srinagar",
       degree: "Civil Department",
       link: "https://nitsri.ac.in",
       logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/National_Institute_of_Technology%2C_Srinagar_Logo.png/500px-National_Institute_of_Technology%2C_Srinagar_Logo.png",
@@ -31,12 +31,12 @@ export default function Education() {
                 alt={edu.institution}
                 width={58}
                 height={58}
-                className="w-[58px] h-[58px] rounded-sm object-contain bg-white p-1"
+                className="w-[54px] h-[54px] md:w-[58px] md:h-[58px] rounded-sm object-contain bg-white p-1"
               />
             </Link>
             <div className="flex flex-col">
               <p className="font-bold">{edu.institution}</p>
-              <p className="text-base font-medium text-muted-foreground">
+              <p className="text-xs md:text-base font-medium text-muted-foreground">
                 <Link
                   href={edu.link}
                   className="hover:text-blue-500 hover:underline"

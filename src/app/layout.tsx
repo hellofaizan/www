@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import "~/styles/globals.css";
 import { ThemeProvider } from "~/hooks/theme-provider";
@@ -10,21 +10,39 @@ import { AppSidebar } from "~/components/sidebar";
 import Hire from "~/components/hire";
 import Footer from "~/components/footer";
 import { Separator } from "~/components/ui/separator";
-import Head from "next/head";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mohammadfaizan.in"),
+  metadataBase: new URL("https://mohammadfaizan.com"),
   title: "Mohammad Faizan | Full Stack Android and Web Developer | India",
   description:
     "Mohammad Faizan, experienced Full Stack Android and Web Developer and specializing in React, Arduino, Java, and Kotlin. Creating responsive web applications and native Android apps | Building internet products",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#5bbad5",
+      },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  other: {
+    "msapplication-TileColor": "#da532c",
+  },
   openGraph: {
     title: "Mohammad Faizan | Full Stack Android and Web Developer | India",
     description:
       "Mohammad Faizan, experienced Full Stack Android and Web Developer and specializing in React, Arduino, Java, and Kotlin. Creating responsive web applications and native Android apps | Building internet products",
     type: "website",
     locale: "en_US",
-    url: "https://mohammadfaizan.in",
+    url: "https://mohammadfaizan.com",
     images: "/portfolio.png",
     siteName: "Mohammad Faizan | Full Stack Android and Web Developer | India",
   },
@@ -119,7 +137,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <body
+        className={
+          GeistSans.className + " min-h-dvh md:min-h-screen bg-background"
+        }
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -135,7 +157,7 @@ export default function RootLayout({
                 addressLocality: "Kashmir",
                 addressCountry: "India",
               },
-              url: "https://mohammadfaizan.in/",
+              url: "https://mohammadfaizan.com/",
               sameAs: [
                 "https://twitter.com/curiousfaizaan",
                 "https://github.com/hellofaizan",
@@ -149,37 +171,7 @@ export default function RootLayout({
           data-token="e7f537364cf1487"
           strategy="afterInteractive"
         />
-      </Head>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
 
-        <script async src="https://cdn.seline.com/seline.js" data-token="e7f537364cf1487"></script>
-      </head>
-      <body
-        className={
-          GeistSans.className + " min-h-dvh md:min-h-screen bg-background"
-        }
-      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

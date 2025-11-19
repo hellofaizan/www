@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Stats | Mohammad Faizan",
     description: "View Mohammad Faizan's portfolio statistics and achievements.",
-    url: "https://mohammadfaizan.in/stats",
+    url: "https://mohammadfaizan.com/stats",
     siteName: "Mohammad Faizan Portfolio",
     type: "website",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: "View Mohammad Faizan's portfolio statistics and achievements.",
   },
   alternates: {
-    canonical: "https://mohammadfaizan.in/stats",
+    canonical: "https://mohammadfaizan.com/stats",
   },
 };
 

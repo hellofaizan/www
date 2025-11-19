@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About | Mohammad Faizan - Web Developer, Not Cricketer",
     description: "Learn more about Mohammad Faizan, a web developer from Kashmir, India. Not the Pakistani cricketer.",
-    url: "https://mohammadfaizan.in/about",
+    url: "https://mohammadfaizan.com/about",
     siteName: "Mohammad Faizan Portfolio",
     type: "profile",
   },
   alternates: {
-    canonical: "https://mohammadfaizan.in/about",
+    canonical: "https://mohammadfaizan.com/about",
   },
 };
 
