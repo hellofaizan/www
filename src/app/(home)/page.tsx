@@ -9,6 +9,7 @@ import FeatNotes from "./components/FeatNotes";
 import { sortPostsByDate } from "~/lib/posts";
 import { notes } from "#site/content";
 import Experience from "./components/experience";
+import Education from "./components/education";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -61,6 +62,10 @@ export default function Home() {
         </div>
       </section>
       <MainSkills />
+      <SectionSeparator title="EDUCATION" />
+      <section>
+        <Education />
+      </section>
       <SectionSeparator title="EXPERIENCE" />
       <section>
         <Experience />

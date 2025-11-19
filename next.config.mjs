@@ -28,6 +28,7 @@ const config = {
       },
       { protocol: "https", hostname: "pbs.twimg.com" },
       { protocol: "https", hostname: "abs.twimg.com" },
+      { protocol: "https", hostname: "upload.wikimedia.org" },
     ],
   },
   webpack: (config) => {
