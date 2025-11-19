@@ -7,12 +7,14 @@ export default function Education() {
   const educationData = [
     {
       institution: "NIT Srinagar",
+      institutionLong: "National Institute of Technology Srinagar",
       degree: "Civil Department",
       link: "https://nitsri.ac.in",
       logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/National_Institute_of_Technology%2C_Srinagar_Logo.png/500px-National_Institute_of_Technology%2C_Srinagar_Logo.png",
       startDate: "2025",
       endDate: "2029",
-      description: "Bachelor of Technology",
+      description: "BTech",
+      descriptionLong: "Bachelor of Technology",
     },
   ];
 
@@ -35,7 +37,12 @@ export default function Education() {
               />
             </Link>
             <div className="flex flex-col">
-              <p className="font-bold">{edu.institution}</p>
+              <p className="font-bold">
+
+                <span className="hidden md:inline">{edu.institutionLong}</span>
+                <span className="md:hidden">{edu.institution}</span>
+
+              </p>
               <p className="text-xs md:text-base font-medium text-muted-foreground">
                 <Link
                   href={edu.link}
@@ -43,15 +50,19 @@ export default function Education() {
                   target="_blank"
                   data-sln-event="user: Education visited"
                 >
+                  <span className="hidden md:inline">{edu.descriptionLong}</span>
+                  <span className="md:hidden">{edu.description}</span>
+                  <span className="hidden md:inline"> - </span>
                   {edu.degree}
                 </Link>
               </p>
               <p className="text-sm text-muted-foreground">{`${edu.startDate} - ${edu.endDate}`}</p>
             </div>
           </div>
-          <div className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
-            <GraduationCap size={15} /> {edu.description}
-          </div>
+          {/* <div className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
+            <GraduationCap size={15} />
+                
+          </div> */}
         </div>
       ))}
     </div>

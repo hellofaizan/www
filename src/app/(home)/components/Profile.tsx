@@ -16,7 +16,7 @@ export default function Profile() {
         <Online />
       </div>
       <div className="flex flex-col items-start">
-        <h1 className="text-2xl md:text-6xl font-istok font-bold">
+        <h1 className="text-2xl md:text-4xl font-istok font-bold">
           Mohammad Faizan
         </h1>
         <p className="md:text-lg font-light dark:text-[#C0C0C0]">Learning and exploring</p>
