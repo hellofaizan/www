@@ -6,6 +6,17 @@ import React from "react";
 export default function Experience() {
   const experienceData = [
     {
+      jobTitle: "Software Engineer",
+      company: "KashmirVista",
+      type: "Full-time",
+      link: "https://kashmirvista.in",
+      logo: "/companylogo/kashmirvista.png",
+      startDate: "Nov 2025",
+      endDate: "Present",
+      location: "",
+      skills: "",
+    },
+    {
       jobTitle: "Full Stack Developer",
       company: "Crito Design",
       type: "Remote",
@@ -21,7 +32,7 @@ export default function Experience() {
   return (
     <div className="w-full">
       {experienceData.map((company, index) => (
-        <div className="flex flex-col items-start px-2 gap-[2px]" key={index}>
+        <div className="flex flex-col items-start px-2 gap-[2px] space-y-2" key={index}>
           <div className="flex items-center gap-3">
             <Link
               href={company.link}
@@ -53,7 +64,7 @@ export default function Experience() {
             </div>
           </div>
           <div className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
-            <GemIcon size={15} /> {company.skills}
+              {(company.skills.length > 0) ? <><GemIcon size={15} /> {company.skills}</> : ""} 
           </div>
         </div>
       ))}

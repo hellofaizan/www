@@ -65,10 +65,10 @@ export default function Home() {
       <section>
         <Experience />
       </section>
-      <SectionSeparator title="PROJECTS" link="/projects" />
+      {/* <SectionSeparator title="PROJECTS" link="/projects" />
       <section>
         <Pinnedprojects />
-      </section>
+      </section> */}
       {featNotes.length > 0 && (
         <>
           <SectionSeparator title="NOTES" link="/notes" />
