@@ -8,7 +8,7 @@ export default function Education() {
     {
       institution: "NIT Srinagar",
       institutionLong: "National Institute of Technology Srinagar",
-      degree: "Civil Department",
+      degree: "Civil Engineering",
       link: "https://nitsri.ac.in",
       logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/National_Institute_of_Technology%2C_Srinagar_Logo.png/500px-National_Institute_of_Technology%2C_Srinagar_Logo.png",
       startDate: "2025",
@@ -52,7 +52,7 @@ export default function Education() {
                 >
                   <span className="hidden md:inline">{edu.descriptionLong}</span>
                   <span className="md:hidden">{edu.description}</span>
-                  <span className="hidden md:inline"> - </span>
+                  <span> - </span>
                   {edu.degree}
                 </Link>
               </p>
