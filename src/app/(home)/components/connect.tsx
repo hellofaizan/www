@@ -30,7 +30,7 @@ export default function Connect() {
             className="rounded-full border border-muted px-6 bg-[#345FCD] text-white hover:bg-[#2760f0] flex items-center gap-1"
           >
             <User size={16} />
-            Resume
+            LinkedIn
           </Button>
         </Link>
       </div>
