@@ -20,6 +20,7 @@ const navItems = {
 };
 
 const moreLinks = [
+  { href: "/resume", label: "Resume" },
   { href: "/links", label: "Links" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -31,6 +32,7 @@ const linkClass =
 
 export function Navbar() {
   const pathname = usePathname();
+  const isResume = pathname === "/resume";
 
   const isActive = (path: string) => {
     if (path === "/notes") {
@@ -40,7 +42,14 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 mb-12 border-b border-border/60 bg-background/80 backdrop-blur-xl md:top-3 md:mb-14 md:border-none">
+    <nav
+      className={cn(
+        "sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl",
+        isResume
+          ? "mb-0 shrink-0 md:border-b"
+          : "mb-12 md:top-3 md:mb-14 md:border-none"
+      )}
+    >
       <div className="flex w-full items-center justify-between px-5 py-3 md:rounded-xl md:border md:border-border/80 md:bg-card/40 md:px-4 md:py-2 md:shadow-sm md:backdrop-blur-xl">
         <div className="flex flex-1 items-center gap-3 md:pl-1">
           <Link href="/" aria-label="Home" className="shrink-0">
