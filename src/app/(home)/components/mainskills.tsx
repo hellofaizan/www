@@ -1,74 +1,36 @@
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+
+const tech = [
+  { logo: "/techlogos/typescript.svg", name: "TypeScript" },
+  { logo: "/techlogos/kotlin.svg", name: "Kotlin" },
+  { logo: "/techlogos/java.svg", name: "Java" },
+  { logo: "/techlogos/nextjs.svg", name: "Next.js" },
+  { logo: "/techlogos/react.svg", name: "React" },
+  { logo: "/techlogos/postgresql.svg", name: "PostgreSQL" },
+  { logo: "/techlogos/tailwindcss.svg", name: "Tailwind CSS" },
+  { logo: "/techlogos/hugging_face.svg", name: "AI / ML" },
+  { logo: "/techlogos/android-icon.svg", name: "Android" },
+  { logo: "/techlogos/figma.svg", name: "Figma" },
+];
 
 export default function MainSkills() {
-  const tech = [
-    {
-      logo: "/techlogos/typescript.svg",
-      name: "TypeScript",
-    },
-    {
-      logo: "/techlogos/kotlin.svg",
-      name: "Kotlin",
-    },
-    {
-      logo: "/techlogos/nextjs.svg",
-      name: "Next JS",
-    },
-    {
-      logo: "/techlogos/react.svg",
-      name: "React",
-    },
-    // {
-    //   logo: "/techlogos/java.svg",
-    //   name: "Java",
-    // },
-    // {
-    //   logo: "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
-    //   name: "Python",
-    // },
-    {
-      logo: "/techlogos/android-icon.svg",
-      name: "Android",
-    },
-    {
-      logo: "/techlogos/arduino.png",
-      name: "Arduino",
-    },
-    {
-      logo: "/techlogos/postgresql.svg",
-      name: "Postgres",
-    },
-    {
-      logo: "/techlogos/blender.svg",
-      name: "Blender",
-    },
-    {
-      logo: "/techlogos/figma.svg",
-      name: "Figma",
-    },
-  ];
   return (
-    <div className="flex gap-2 flex-wrap">
-      {tech.map((item, index) => {
-        return (
-          <div
-            key={index}
-            className="flex items-center gap-2 border p-[3px] px-2 rounded-md md:p-1 md:px-3"
-          >
-            <Image
-              src={item.logo}
-              alt={item.name}
-              className="w-4 h-4 md:w-5 md:h-5"
-              width={32}
-              height={32}
-            />
-            <span className="text-xs md:text-sm font-medium">{item.name}</span>
-          </div>
-        );
-      })}
+    <div className="flex flex-wrap gap-2">
+      {tech.map((item) => (
+        <div
+          key={item.name}
+          className="flex items-center gap-2 rounded-lg border border-border/80 bg-muted/40 px-2.5 py-1.5 transition-colors hover:border-border hover:bg-muted/70"
+        >
+          <Image
+            src={item.logo}
+            alt=""
+            className="h-4 w-4 md:h-5 md:w-5"
+            width={20}
+            height={20}
+          />
+          <span className="text-xs font-medium md:text-sm">{item.name}</span>
+        </div>
+      ))}
     </div>
   );
 }

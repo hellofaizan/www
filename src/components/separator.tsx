@@ -1,6 +1,5 @@
-import { ExternalLink, LinkIcon, MoveUpRightIcon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { Separator } from "~/components/ui/separator";
 
 interface SeparatorProps {
@@ -11,25 +10,24 @@ interface SeparatorProps {
 
 export default function SectionSeparator(props: SeparatorProps) {
   return (
-    <div className="flex col-span-3 items-center gap-2 text-muted-foreground text-xs md:text-sm">
-      <Separator className="flex-1" />
-      <div className="flex gap-1 items-center">
-        <p className="text-xs uppercase">{props.title}</p>
-        {props.link && (
+    <div className="flex items-center gap-3 py-1 text-muted-foreground">
+      <Separator className="flex-1 bg-border/60" />
+      <div className="flex items-center gap-2 shrink-0">
+        <span className="text-[11px] font-semibold uppercase tracking-widest text-foreground/70">
+          {props.title}
+        </span>
+        {props.link ? (
           <Link
             href={props.link}
             data-sln-event={`user: Section visited: ${props.title}`}
-            className="border rounded-lg px-3 flex items-center gap-1"
+            className="inline-flex items-center gap-1 rounded-full border border-border bg-muted/50 px-2.5 py-0.5 text-[11px] font-medium transition-colors hover:bg-muted hover:text-foreground"
           >
-            <span>{props.linkText || "all"}</span>
-            <LinkIcon size={12} />
+            <span>{props.linkText || "View all"}</span>
+            <ArrowUpRight size={12} aria-hidden />
           </Link>
-        )}
+        ) : null}
       </div>
-      <div className="w-[8%] flex items-center justify-center">
-        <Separator />
-        <span className="w-1 h-1 bg-muted rotate-45 -ml-1" />
-      </div>
+      <Separator className="w-8 bg-border/60" />
     </div>
   );
 }

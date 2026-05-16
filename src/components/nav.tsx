@@ -1,22 +1,33 @@
 "use client";
 
-import { ChevronDown, Home, Menu } from "lucide-react";
+import { ChevronDown, Home } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "~/lib/utils";
 import { ModeToggle } from "./ModeToggle";
 import { SidebarTrigger } from "./ui/sidebar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "~/components/ui/dropdown-menu";
 
 const navItems = {
-  "/projects": {
-    name: "projects",
-  },
-  "/notes": {
-    name: "notes",
-  },
+  "/projects": { name: "Projects" },
+  "/notes": { name: "Notes" },
 };
+
+const moreLinks = [
+  { href: "/links", label: "Links" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/stats", label: "Stats" },
+];
+
+const linkClass =
+  "rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -29,47 +40,70 @@ export function Navbar() {
   };
 
   return (
-    <nav className="flex flex-row md:mb-16 mb-14 border-b dark:border-[#838383]/25 border-[#606060]/45 md:border-none sticky top-0 md:top-2 z-50">
-      <div className="flex md:px-3 items-center justify-between text-lg px-5 w-full md:border md:border-[#838383]/45 md:rounded-md md:p-2 py-2 md:backdrop-blur-3xl backdrop-blur-3xl">
-        <div className="flex flex-row items-center flex-1 gap-4 md:pl-2">
-          <Image src="/faizan.png" width={40} height={40} alt="Hellofaizan" />
-          <div className="hidden md:flex items-center gap-1">
+    <nav className="sticky top-0 z-50 mb-12 border-b border-border/60 bg-background/80 backdrop-blur-xl md:top-3 md:mb-14 md:border-none">
+      <div className="flex w-full items-center justify-between px-5 py-3 md:rounded-xl md:border md:border-border/80 md:bg-card/40 md:px-4 md:py-2 md:shadow-sm md:backdrop-blur-xl">
+        <div className="flex flex-1 items-center gap-3 md:pl-1">
+          <Link href="/" aria-label="Home" className="shrink-0">
+            <Image
+              src="/faizan.png"
+              width={36}
+              height={36}
+              alt=""
+              className="rounded-full ring-2 ring-border/60"
+            />
+          </Link>
+          <div className="hidden items-center gap-0.5 md:flex">
             <Link
-              href={"/"}
+              href="/"
               className={cn(
-                "flex items-center gap-[2px] cursor-pointer hover:dark:text-neutral-200 hover:text-neutral-900 hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0] rounded-md align-middle px-2 py-[6px]",
-                pathname === "/" && "bg-gray-500/10 dark:text-white"
+                linkClass,
+                "inline-flex items-center gap-1.5",
+                pathname === "/" && "bg-muted text-foreground"
               )}
-              aria-label="Home"
             >
-              <Home size={17} />
-              <span className="sr-only">Home</span>
+              <Home size={16} aria-hidden />
+              Home
             </Link>
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <div className="flex flex-row items-center" key={name}>
-                  <Link
-                    key={path}
-                    href={path}
-                    className={cn(
-                      "transition-all hover:dark:text-neutral-200 hover:text-neutral-900 hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0] rounded-md flex align-middle px-2",
-                      isActive(path) && "bg-gray-500/10 dark:text-white"
-                    )}
-                  >
-                    {name}
-                  </Link>
-                </div>
-              );
-            })}
-            <p className="group flex items-center gap-[2px] cursor-pointer hover:dark:text-neutral-200 hover:text-neutral-900 hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0] rounded-md align-middle px-2">
-              more
-              <ChevronDown size={17} className="group-hover:rotate-180" />
-            </p>
+            {Object.entries(navItems).map(([path, { name }]) => (
+              <Link
+                key={path}
+                href={path}
+                className={cn(linkClass, isActive(path) && "bg-muted text-foreground")}
+              >
+                {name}
+              </Link>
+            ))}
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className={cn(
+                  linkClass,
+                  "inline-flex items-center gap-1 outline-none data-[state=open]:bg-muted data-[state=open]:text-foreground"
+                )}
+              >
+                More
+                <ChevronDown size={16} className="opacity-70" aria-hidden />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="min-w-[10rem]">
+                {moreLinks.map(({ href, label }) => (
+                  <DropdownMenuItem key={href} asChild>
+                    <Link
+                      href={href}
+                      className={cn(
+                        "w-full cursor-pointer",
+                        pathname === href && "font-medium text-foreground"
+                      )}
+                    >
+                      {label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
 
-        <div className="flex gap-1 items-center">
-          <ModeToggle className="border-none hover:dark:bg-gray-500/10 hover:bg-muted-foreground/15 text-[#2f2f2f] dark:text-[#C0C0C0]" />
+        <div className="flex items-center gap-1">
+          <ModeToggle className="rounded-lg border-none hover:bg-muted" />
           <div className="md:hidden">
             <SidebarTrigger />
           </div>

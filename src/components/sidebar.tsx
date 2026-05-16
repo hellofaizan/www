@@ -5,16 +5,7 @@ import {
   IconBrandLinkedin,
   IconBrandX,
 } from "@tabler/icons-react";
-import {
-  Calendar,
-  ChevronUp,
-  Globe2,
-  Home,
-  Inbox,
-  Search,
-  Settings,
-  User2,
-} from "lucide-react";
+import { Calendar, Globe2, Home, Inbox, Search, Settings } from "lucide-react";
 import Link from "next/link";
 
 import {

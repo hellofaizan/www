@@ -34,18 +34,18 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const basicInfo =
-    "A builder a developer focused on AI, machine learning, mathematics, physics, and engineering. I love working at the intersection of code and real-world systems - experimenting with algorithms, automation, robotics, and drone tech.";
+    "Full-stack developer building production SaaS, AI systems, and cross-platform apps. I work across Next.js, TypeScript, PostgreSQL, Android, and applied AI—from link-in-bio platforms to multi-tenant decision engines and desktop tooling.";
 
   const aboutMe1 =
-    "Most of my projects revolve around understanding how things work at a fundamental level, then using code to model, simulate, or improve them. I enjoy exploring applied math, physics driven systems, and the kind of engineering problems where software meets hardware.";
+    "Most of my work sits at the intersection of full-stack web development, AI/ML, and systems that ship to real users. I care about auth flows, scalable data models, retrieval pipelines, and polished product experiences.";
 
   const aboutMe2 =
-    "When I’m not deep in code, I’m usually learning new concepts, building small hardware experiments, or testing ideas that push my understanding forward.";
+    "Outside shipped products, I explore embedded systems, computer vision, and hardware—always learning how software can model and improve real-world systems.";
 
   const featNotes = sortPostsByDate(notes.filter((post) => post.featured));
 
   return (
-    <main className="flex flex-col gap-6 md:gap-7">
+    <main className="flex flex-col gap-8 md:gap-10">
       <Profile />
       <AboutMe text={basicInfo} />
       <Connect />
@@ -65,10 +65,10 @@ export default function Home() {
       <section>
         <Experience />
       </section>
-      {/* <SectionSeparator title="PROJECTS" link="/projects" />
+      <SectionSeparator title="PROJECTS" link="/projects" />
       <section>
         <Pinnedprojects />
-      </section> */}
+      </section>
       {featNotes.length > 0 && (
         <>
           <SectionSeparator title="NOTES" link="/notes" />

@@ -1,72 +1,65 @@
-import { GemIcon } from "lucide-react";
+import { GemIcon, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { PortfolioCard } from "~/components/portfolio-card";
+import { PortfolioHighlights } from "~/components/portfolio-highlights";
+import { experienceData } from "~/data/portfolio";
 
 export default function Experience() {
-  const experienceData = [
-    {
-      jobTitle: "Software Engineer",
-      company: "KashmirVista",
-      type: "Full-time",
-      link: "https://kashmirvista.in",
-      logo: "/companylogo/kashmirvista.png",
-      startDate: "Nov 2025",
-      endDate: "Present",
-      location: "",
-      skills: "",
-    },
-    {
-      jobTitle: "Full Stack Developer",
-      company: "Crito Design",
-      type: "Remote",
-      link: "https://crito.design",
-      logo: "/companylogo/crito.jpg",
-      startDate: "Oct 2024",
-      endDate: "Jun 2025 - 9 mos",
-      location: "",
-      skills: "Next JS, Prisma ORM, AWS Lambda, Ffmpeg, PostgreSQL",
-    },
-  ];
-
   return (
-    <div className="w-full">
+    <div className="flex w-full flex-col gap-4">
       {experienceData.map((company, index) => (
-        <div className="flex flex-col items-start px-2 gap-[2px] space-y-2" key={index}>
-          <div className="flex items-center gap-3">
+        <PortfolioCard key={index} className="flex flex-col gap-3">
+          <div className="flex items-start gap-3">
             <Link
               href={company.link}
               target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 rounded-lg ring-1 ring-border/60 transition-opacity hover:opacity-80"
               data-sln-event="user: Company visited"
             >
               <Image
                 src={company.logo}
                 alt={company.company}
-                width={58}
-                height={58}
-                className="w-[54px] h-[54px] md:w-[58px] md:h-[58px] rounded-sm"
+                width={56}
+                height={56}
+                className="h-14 w-14 rounded-lg object-cover"
               />
             </Link>
-            <div className="flex flex-col">
-              <p className="font-bold">{company.jobTitle}</p>
-              <p className="text-xs md:text-base font-medium text-muted-foreground">
+            <div className="min-w-0 flex-1">
+              <h3 className="font-semibold leading-tight">{company.jobTitle}</h3>
+              <p className="mt-0.5 text-sm text-muted-foreground">
                 <Link
                   href={company.link}
-                  className="hover:text-blue-500 hover:underline"
+                  className="font-medium text-foreground/90 hover:text-blue-500 hover:underline"
                   target="_blank"
+                  rel="noopener noreferrer"
                   data-sln-event="user: Company visited"
                 >
                   {company.company}
-                </Link>{" "}
-                • <span className="text-sm">{company.type}</span>
+                </Link>
+                <span className="mx-1.5 text-border">·</span>
+                {company.type}
               </p>
-              <p className="text-sm text-muted-foreground">{`${company.startDate} - ${company.endDate}`}</p>
+              <p className="mt-0.5 text-sm text-muted-foreground">
+                {company.startDate} – {company.endDate}
+              </p>
             </div>
           </div>
-          <div className="text-xs md:text-sm text-muted-foreground flex items-center gap-1">
-              {(company.skills.length > 0) ? <><GemIcon size={15} /> {company.skills}</> : ""} 
-          </div>
-        </div>
+          {company.location ? (
+            <p className="flex items-center gap-1.5 text-xs text-muted-foreground md:text-sm">
+              <MapPin size={14} className="shrink-0" aria-hidden />
+              {company.location}
+            </p>
+          ) : null}
+          {company.skills ? (
+            <p className="flex items-start gap-1.5 text-xs text-muted-foreground md:text-sm">
+              <GemIcon size={14} className="mt-0.5 shrink-0" aria-hidden />
+              <span>{company.skills}</span>
+            </p>
+          ) : null}
+          <PortfolioHighlights items={company.highlights} />
+        </PortfolioCard>
       ))}
     </div>
   );
