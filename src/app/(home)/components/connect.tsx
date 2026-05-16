@@ -1,4 +1,5 @@
 import { IconBrandLinkedin, IconBrandX } from "@tabler/icons-react";
+import { FileIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
 
@@ -16,13 +17,13 @@ export default function Connect() {
       <div className="flex flex-wrap gap-2">
         <Button asChild size="sm" variant="outline" className="rounded-full gap-2">
           <Link
-            href="https://twitter.com/curiousfaizaan"
+            href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            data-sln-event="user: Twitter button clicked"
+            data-sln-event="user: Resume button clicked"
           >
-            <IconBrandX size={16} aria-hidden />
-            X / Twitter
+            <FileIcon size={16} aria-hidden />
+            Resume
           </Link>
         </Button>
         <Button asChild size="sm" className="rounded-full gap-2">

@@ -68,7 +68,7 @@ export default function ProjectCard(props: ProjectCardProps) {
             <Button
               asChild
               size="default"
-              className="min-h-10 flex-1 gap-2 rounded-lg sm:flex-none"
+              className="flex-1 gap-2 rounded-lg sm:flex-none"
             >
               <Link
                 href={props.link}
@@ -87,7 +87,7 @@ export default function ProjectCard(props: ProjectCardProps) {
               asChild
               variant="outline"
               size="default"
-              className="min-h-10 flex-1 gap-2 rounded-lg sm:flex-none"
+              className="flex-1 gap-2 rounded-lg sm:flex-none"
             >
               <Link
                 href={props.github}
